@@ -1,9 +1,10 @@
-import Nav from "./components/nav/nav";
+import CallToAction from "./components/CallToAction/CallToAction";
+import NavBar from "./components/nav/NavBar";
 
 function App() {
   return (
     <>
-      <Nav />
+      <CallToAction/>
     </>
   );
 }

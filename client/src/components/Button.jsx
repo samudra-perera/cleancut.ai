@@ -1,20 +1,30 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+import { Link, useNavigate } from "react-router-dom";
 
-const StyledButton = styled.button`
-background-color: red;
-font-size: 32px;
-color: white;
-`
+const StyledButton = styled.a`
+  background-color: #f8705d;
+  font-size: .8rem;
+  padding: .7rem 2rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 1rem;
+  font-family: Graphik;
+  font-weight: 500;
+`;
 
-//Button component with a text prop that allows for reusability
+//Button component with a text prop that allows for reusability across the application
+//The component is a styled anchor tag
 const Button = (props) => {
-    const {text} = props
+    //The Text prop renders what will be seen in the button
+    //To prop will render the link, has to include http
+  const { text, to } = props;
+
   return (
     <>
-        <StyledButton>{text}</StyledButton>
+      <StyledButton href={to}>{text}</StyledButton>
     </>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
