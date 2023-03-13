@@ -61,7 +61,7 @@ const NavBar = () => {
         </Menu>
       </Nav>
       {/* Dropdown links is rendered based like this for now...if there are multiple dropdowns this will have to change */}
-      {dropDownOpen && <NavDropDown/>}
+      {dropDownOpen && <NavDropDown isOpen={dropDownOpen}/>}
     </>
   );
 };

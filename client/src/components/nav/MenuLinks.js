@@ -9,7 +9,7 @@ export const MenuLinks = [
         url: "#",
       },
       {
-        title: "FAQ",
+        title: "FAQs",
         url: "#",
       },
       {
@@ -42,8 +42,8 @@ export const MenuLinks = [
     ]
   },
   {
-    title: "Services",
-    url: "#",
+    title: "About",
+    url: "/about",
   },
   {
     title: "Sign in",

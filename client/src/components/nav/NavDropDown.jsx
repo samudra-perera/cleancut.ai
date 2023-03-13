@@ -1,25 +1,65 @@
 import React, { useState } from "react";
-import { MenuLink } from "./styles/Nav.styled";
+import { MenuLinks } from "./MenuLinks";
 import styled from "styled-components";
 import { HiChevronDown } from "react-icons/hi";
 
+//Desktop Styles
 const DropDown = styled.div`
   background-color: white;
   padding: 1rem 0rem 0rem 2rem;
   display: flex;
+  font-family: Graphik;
   justify-content: space-between;
   border-radius: 0 0 1.5rem 1.5rem;
-  align-items: center;
   flex-wrap: wrap;
   z-index: 5;
   margin: 0rem 1rem;
-  height: 200px;
+  max-height: ${({ isOpen }) => (isOpen ? "1000px" : "0")};
+  transition: max-height 0.7s ease-in;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     display: none;
   }
 `;
 
+const AsideContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: .8rem;
+  flex-grow: 6;
+`;
+
+const AsideLinks = styled.a`
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  width: 50%;
+  cursor: pointer;
+  font-weight: 500;
+`;
+
+const TestimonialContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 5;
+  padding-left: 1.5rem;
+`;
+
+const TestimonialTitle = styled.h5`
+  font-size: 1rem;
+  font-weight: 400;
+`;
+
+const TestimonialLinks = styled.a`
+  font-size: .8rem;
+  font-weight: 300;
+  color: black;
+  padding: .3rem 0;
+  text-decoration: none;
+`;
+
+//Mobile Styles
 const MobileDropDown = styled.div`
   display: flex;
   flex-direction: column;
@@ -61,11 +101,32 @@ const TestimonialLink = styled.a`
 
 //This is the desktop Navigation DropDown
 const NavDropDown = (props) => {
-  const { title } = props;
+  const { isOpen } = props;
+  const subMenu = MenuLinks[0].subMenu;
+  const testimonials = MenuLinks[0].aside[0].links;
+  console.log(testimonials);
   return (
-    <>
-      <DropDown>This is some completely random stuff for now</DropDown>
-    </>
+    <DropDown isOpen={isOpen}>
+      <AsideContent>
+        {subMenu.map((item, index) => {
+          return <AsideLinks key={index}>{item.title}</AsideLinks>;
+        })}
+      </AsideContent>
+      <TestimonialContent>
+        <TestimonialTitle>Testimonials</TestimonialTitle>
+        {
+          <>
+            {testimonials.map((item, index) => {
+              return (
+                <TestimonialLinks key={index} href={item.url}>
+                • {item.title}
+                </TestimonialLinks>
+              );
+            })}
+          </>
+        }
+      </TestimonialContent>
+    </DropDown>
   );
 };
 
@@ -73,7 +134,6 @@ const NavDropDown = (props) => {
 const MobileNavDropDown = (props) => {
   const [open, setOpen] = useState(false);
   const { subMenu, aside } = props;
-  console.log(subMenu);
   return (
     <MobileDropDown>
       {subMenu.map((item) => {
@@ -82,17 +142,15 @@ const MobileNavDropDown = (props) => {
       <SubMenuLink onClick={() => setOpen(!open)}>
         {aside[0].title} <HiChevronDown />
       </SubMenuLink>
-      {
-        open && 
+      {open && (
         <>
-        {
-            aside[0].links.map((item) => {
-                return <TestimonialLink href={item.url}>{item.title}</TestimonialLink>
-            })
-        }
+          {aside[0].links.map((item) => {
+            return (
+              <TestimonialLink href={item.url}>{item.title}</TestimonialLink>
+            );
+          })}
         </>
-            
-      }
+      )}
     </MobileDropDown>
   );
 };
