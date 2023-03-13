@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MenuLink } from "./styles/Nav.styled";
 import styled from "styled-components";
+import { HiChevronDown } from "react-icons/hi";
 
 const DropDown = styled.div`
   background-color: white;
@@ -21,12 +22,29 @@ const DropDown = styled.div`
 
 const MobileDropDown = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   @media (min-width: 768px) {
     display: none;
   }
 `;
 
-//Component for the dropdown navigation section that is full width
+const SubMenuLink = styled.a`
+  text-decoration: none;
+  color: #03004e;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+
+  &:hover {
+    border-bottom: solid black;
+  }
+`;
+
+//This is the desktop Navigation DropDown
 const NavDropDown = (props) => {
   const { title } = props;
   return (
@@ -36,14 +54,19 @@ const NavDropDown = (props) => {
   );
 };
 
+//this component is the mobile Navigation Dropdown
 const MobileNavDropDown = (props) => {
-  const { title } = props;
+  const { subMenu, aside } = props;
+  console.log(subMenu);
   return (
-    <>
-      <MobileDropDown>
-        This is some completely random stuff for now
-      </MobileDropDown>
-    </>
+    <MobileDropDown>
+      {subMenu.map((item) => {
+        return <SubMenuLink>{item.title}</SubMenuLink>;
+      })}
+      <SubMenuLink>
+        {aside[0].title} <HiChevronDown />
+      </SubMenuLink>
+    </MobileDropDown>
   );
 };
 

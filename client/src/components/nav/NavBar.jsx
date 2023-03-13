@@ -10,6 +10,7 @@ import {
 import Button from "../Button";
 import { MenuLinks } from "./MenuLinks";
 import { NavDropDown, MobileNavDropDown } from "./NavDropDown";
+import {HiChevronDown} from 'react-icons/hi'
 
 
 const NavBar = () => {
@@ -33,6 +34,7 @@ const NavBar = () => {
           <span />
         </Hamburger>
         <Menu isOpen={isOpen}>
+        {/* This menulink map takes in the MenuLinks array and returns links based on object information  */}
           {MenuLinks.map((item, index) => {
             return (
               <>
@@ -43,8 +45,9 @@ const NavBar = () => {
                       onClick={() => setDropDownOpen(!dropDownOpen)}
                     >
                       {item.title}
+                      <HiChevronDown/>
                     </MenuLink>
-                    {dropDownOpen && <MobileNavDropDown />}
+                    {dropDownOpen && <MobileNavDropDown subMenu={item.subMenu} aside={item.aside}/>}
                   </>
                 ) : (
                   <MenuLink href={item.url} key={index}>
@@ -57,6 +60,7 @@ const NavBar = () => {
           <Button text={"Start Free Trial"} to="https://google.com" />
         </Menu>
       </Nav>
+      {/* Dropdown links is rendered based like this for now...if there are multiple dropdowns this will have to change */}
       {dropDownOpen && <NavDropDown/>}
     </>
   );
