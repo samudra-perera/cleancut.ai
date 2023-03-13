@@ -8,10 +8,15 @@ import {
   LogoImage,
 } from "./styles/Nav.styled";
 import Button from "../Button";
+import { MenuLinks } from "./MenuLinks";
+import { NavDropDown, MobileNavDropDown } from "./NavDropDown";
+
 
 const NavBar = () => {
-  //State for the mobile menu 
-  const [isOpen, setIsOpen] = useState(false)
+  //State for the mobile menu
+  const [isOpen, setIsOpen] = useState(false);
+  //State for the dropdown menu
+  const [dropDownOpen, setDropDownOpen] = useState(false);
 
   return (
     <>
@@ -28,12 +33,31 @@ const NavBar = () => {
           <span />
         </Hamburger>
         <Menu isOpen={isOpen}>
-          <MenuLink href="#">Resources</MenuLink>
-          <MenuLink href="/about">About</MenuLink>
-          <MenuLink href="#">Sign-in</MenuLink>
+          {MenuLinks.map((item, index) => {
+            return (
+              <>
+                {item.dropDown ? (
+                  <>
+                    <MenuLink
+                      key={index}
+                      onClick={() => setDropDownOpen(!dropDownOpen)}
+                    >
+                      {item.title}
+                    </MenuLink>
+                    {dropDownOpen && <MobileNavDropDown />}
+                  </>
+                ) : (
+                  <MenuLink href={item.url} key={index}>
+                    {item.title}
+                  </MenuLink>
+                )}
+              </>
+            );
+          })}
           <Button text={"Start Free Trial"} to="https://google.com" />
         </Menu>
       </Nav>
+      {dropDownOpen && <NavDropDown/>}
     </>
   );
 };

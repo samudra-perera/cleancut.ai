@@ -15,7 +15,7 @@ const Nav = styled.nav`
   align-items: center;
   flex-wrap: wrap;
   z-index: 5;
-  margin: 1rem;
+  margin: 1rem 1rem 0rem 1rem;
 `;
 
 const Hamburger = styled.div`
@@ -43,9 +43,20 @@ const MenuLink = styled.a`
   text-transform: uppercase;
   font-size: 0.8rem;
   padding: 1.7rem 1.3rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
 
   &:hover {
     border-bottom: solid black;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    &:hover {
+    border-bottom: none;
+  }
   }
 `;
 
