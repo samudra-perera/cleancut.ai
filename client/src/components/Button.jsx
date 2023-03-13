@@ -5,10 +5,10 @@ import { Link, useNavigate } from "react-router-dom";
 const StyledButton = styled.a`
   background-color: #f8705d;
   font-size: .8rem;
-  padding: .7rem 2rem;
+  padding: .6rem 2rem;
   color: white;
   text-decoration: none;
-  border-radius: 1rem;
+  border-radius: 2rem;
   font-family: Graphik;
   font-weight: 500;
 `;

@@ -10,6 +10,9 @@ import {
 import Button from "../Button";
 
 const NavBar = () => {
+  //State for the mobile menu 
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <>
       <Nav>
@@ -19,12 +22,12 @@ const NavBar = () => {
             alt="Cleancut.ai Logo"
           />
         </Logo>
-        <Hamburger>
+        <Hamburger onClick={() => setIsOpen(!isOpen)}>
           <span />
           <span />
           <span />
         </Hamburger>
-        <Menu>
+        <Menu isOpen={isOpen}>
           <MenuLink href="#">Resources</MenuLink>
           <MenuLink href="/about">About</MenuLink>
           <MenuLink href="#">Sign-in</MenuLink>
