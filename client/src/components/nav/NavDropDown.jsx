@@ -44,6 +44,21 @@ const SubMenuLink = styled.a`
   }
 `;
 
+const TestimonialLink = styled.a`
+  text-decoration: none;
+  color: #03004e;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+
+  &:hover {
+    border-bottom: solid black;
+  }
+`;
+
 //This is the desktop Navigation DropDown
 const NavDropDown = (props) => {
   const { title } = props;
@@ -56,16 +71,28 @@ const NavDropDown = (props) => {
 
 //this component is the mobile Navigation Dropdown
 const MobileNavDropDown = (props) => {
+  const [open, setOpen] = useState(false);
   const { subMenu, aside } = props;
   console.log(subMenu);
   return (
     <MobileDropDown>
       {subMenu.map((item) => {
-        return <SubMenuLink>{item.title}</SubMenuLink>;
+        return <SubMenuLink href={item.url}>{item.title}</SubMenuLink>;
       })}
-      <SubMenuLink>
+      <SubMenuLink onClick={() => setOpen(!open)}>
         {aside[0].title} <HiChevronDown />
       </SubMenuLink>
+      {
+        open && 
+        <>
+        {
+            aside[0].links.map((item) => {
+                return <TestimonialLink href={item.url}>{item.title}</TestimonialLink>
+            })
+        }
+        </>
+            
+      }
     </MobileDropDown>
   );
 };
