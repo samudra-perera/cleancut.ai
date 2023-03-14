@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 //This is the navigation container styling
 //The Nav needs to float over the content and be sticky as the user scrolls through the content
-const Nav = styled.nav`
+const NavContainer = styled.div`
   position: sticky;
-  top: 0;
+  top: 20px;
   left: 0;
   right: 0;
+  z-index: 5;
+`;
+const Nav = styled.nav`
   background-color: white;
   padding: 0rem 0rem 0rem 2rem;
   display: flex;
@@ -15,7 +18,7 @@ const Nav = styled.nav`
   align-items: center;
   flex-wrap: wrap;
   z-index: 5;
-  margin: 1rem 1rem 0rem 1rem;
+  margin: 0rem 1rem 0rem 1rem;
 `;
 
 const Hamburger = styled.div`
@@ -55,8 +58,8 @@ const MenuLink = styled.a`
     width: 100%;
     justify-content: center;
     &:hover {
-    border-bottom: none;
-  }
+      border-bottom: none;
+    }
   }
 `;
 
@@ -83,4 +86,4 @@ const LogoImage = styled.img`
   width: 100px;
 `;
 
-export { Nav, Hamburger, MenuLink, Menu, Logo, LogoImage };
+export { Nav, Hamburger, MenuLink, Menu, Logo, LogoImage, NavContainer };

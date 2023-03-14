@@ -5,6 +5,8 @@ import { HiChevronDown } from "react-icons/hi";
 
 //Desktop Styles
 const DropDown = styled.div`
+  position: relative;
+  top: -20px;
   background-color: white;
   padding: 1rem 0rem 0rem 2rem;
   display: flex;
@@ -12,7 +14,7 @@ const DropDown = styled.div`
   justify-content: space-between;
   border-radius: 0 0 1.5rem 1.5rem;
   flex-wrap: wrap;
-  z-index: 5;
+  z-index: 1;
   margin: 0rem 1rem;
   max-height: ${({ isOpen }) => (isOpen ? "1000px" : "0")};
   transition: max-height 0.7s ease-in;
@@ -27,7 +29,7 @@ const AsideContent = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: .8rem;
+  padding: 0.8rem;
   flex-grow: 6;
 `;
 
@@ -52,10 +54,10 @@ const TestimonialTitle = styled.h5`
 `;
 
 const TestimonialLinks = styled.a`
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 300;
   color: black;
-  padding: .3rem 0;
+  padding: 0.3rem 0;
   text-decoration: none;
 `;
 
@@ -100,11 +102,12 @@ const TestimonialLink = styled.a`
 `;
 
 //This is the desktop Navigation DropDown
+//Currently the date for this component is static and stuck as the single array value [0]
 const NavDropDown = (props) => {
   const { isOpen } = props;
   const subMenu = MenuLinks[0].subMenu;
   const testimonials = MenuLinks[0].aside[0].links;
-  console.log(testimonials);
+
   return (
     <DropDown isOpen={isOpen}>
       <AsideContent>
@@ -119,7 +122,7 @@ const NavDropDown = (props) => {
             {testimonials.map((item, index) => {
               return (
                 <TestimonialLinks key={index} href={item.url}>
-                • {item.title}
+                  • {item.title}
                 </TestimonialLinks>
               );
             })}

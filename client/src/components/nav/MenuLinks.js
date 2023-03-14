@@ -1,4 +1,5 @@
-//Object holding all the menu links
+//Object holding all the menu links and the sublinks
+//The dropdown true boolean is for the map to render the dropdonwn component
 export const MenuLinks = [
   {
     title: "Resources",
