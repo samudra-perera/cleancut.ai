@@ -17,7 +17,7 @@ const FAQ = () => {
                 return <FAQDropDown question={question} key={index}/>
             })
           }
-          <FAQLink>To learn more about Cleancut {">"}</FAQLink>
+          <FAQLink href="http://google.com">To learn more about Cleancut {">"}</FAQLink>
         </StyledContainer>
       </FAQContainer>
     </>

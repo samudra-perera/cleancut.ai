@@ -4,6 +4,8 @@ import { StyledHeading, StyledLink } from "../../CallToAction/styles/CTA.styled"
 const FAQLink = styled(StyledLink)`
   font-size: 1.1rem;
   font-weight: 300;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 `;
 
 const FAQContainer = styled.div`
