@@ -21,7 +21,7 @@ const Button = (props) => {
 
   return (
     <>
-      <StyledButton href={to}>{text}</StyledButton>
+      <StyledButton href={to ? to : '#'}>{text}</StyledButton>
     </>
   );
 };
