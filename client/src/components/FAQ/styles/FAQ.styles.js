@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledHeading, StyledLink } from "../../CallToAction/styles/CTA.styled";
+import { StyledContainer, StyledHeading, StyledLink } from "../../CallToAction/styles/CTA.styled";
 
 const FAQLink = styled(StyledLink)`
   font-size: 1.1rem;
@@ -8,9 +8,13 @@ const FAQLink = styled(StyledLink)`
   margin-bottom: 5rem;
 `;
 
-const FAQContainer = styled.div`
+const FAQContainerMain = styled.div`
     width: 100vw;
     background-color: #A09DE4;
+`
+
+const FAQContainerSecondary = styled(StyledContainer)`
+    margin-bottom: 0rem;
 `
 
 const FAQHeading = styled(StyledHeading)`
@@ -20,4 +24,4 @@ const FAQHeading = styled(StyledHeading)`
     font-size: 4rem;
 `
 
-export { FAQContainer, FAQLink, FAQHeading };
+export { FAQContainerMain, FAQLink, FAQHeading, FAQContainerSecondary };

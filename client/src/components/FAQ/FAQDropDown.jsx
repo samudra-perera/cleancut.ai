@@ -1,3 +1,4 @@
+//Add Smooth Slide down transition for the dropdown
 import React, { useState } from "react";
 import styled from "styled-components";
 import { StyledParagraph } from "../CallToAction/styles/CTA.styled";
@@ -18,10 +19,8 @@ const DropDownContainer = styled.div`
   cursor: pointer;
   border-bottom: 1px solid black;
 `;
-//Need to add a transition for the opening and closing of the border bottom
-const AnswerDropDown = styled(StyledParagraph)`
-`;
-//
+
+const AnswerDropDown = styled(StyledParagraph)``;
 
 const FAQDropDown = (props) => {
   const [isActive, setIsActive] = useState(false);

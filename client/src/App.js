@@ -1,5 +1,6 @@
 import CallToAction from "./components/CallToAction/CallToAction";
 import FAQ from "./components/FAQ/FAQ";
+import Footer from "./components/Footer/Footer";
 import NavBar from "./components/nav/NavBar";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <NavBar/>
       <CallToAction />
       <FAQ/>
+      <Footer/>
     </>
   );
 }
