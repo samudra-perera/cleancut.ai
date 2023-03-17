@@ -11,6 +11,7 @@ const HeaderTagContainer = styled.div`
 const HeaderText = styled.h5`
   font-size: 1rem;
   color: ${props => props.color || '#B1531E'};
+  font-weight: 400;
 `;
 const HeaderLine = styled.div`
   height: 1.5px;

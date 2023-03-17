@@ -48,7 +48,7 @@ export const MenuLinks = [
   },
   {
     title: "Sign in",
-    url: "#",
+    url: "/signin",
   },
 ];
 
