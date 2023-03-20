@@ -15,8 +15,7 @@ const CardContainer = styled.div`
 const GifContainer = styled.div`
   background-color: white;
   flex-grow: 1;
-  border-bottom-right-radius: 3rem;
-  border-top-right-radius: 3rem;
+  border-radius: ${(props) => props.borderRadius || `0rem`};
 `;
 
 const TextContainer = styled.div`
@@ -49,11 +48,11 @@ const TextLink = styled(StyledLink)`
 `
 
 const WorkFlowCard = (props) => {
-  const { heading, direction, step, align, alignItems, explanation, } = props;
+  const { heading, direction, step, align, alignItems, explanation, borderRadius } = props;
 
   return (
     <CardContainer direction={direction}>
-      <GifContainer></GifContainer>
+      <GifContainer borderRadius={borderRadius}></GifContainer>
       <TextContainer align={alignItems}>
         <TextSpan>{step}</TextSpan>
         <TextHeading align={align}>{heading}</TextHeading>
