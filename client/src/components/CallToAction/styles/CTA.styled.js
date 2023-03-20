@@ -22,6 +22,7 @@ const StyledParagraph = styled.p`
   font-size: 1.1rem;
   font-weight: 300;
   margin: 1rem 6rem 1rem 0rem;
+  color: #03004E;
 `;
 
 const StyledLink = styled.a`

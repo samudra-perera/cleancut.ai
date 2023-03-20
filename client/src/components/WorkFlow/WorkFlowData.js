@@ -6,7 +6,8 @@ export const WorkFlowData = [
         gifLink: '#',
         direction: 'row',
         align: 'right',
-        alignItems: 'flex-end'
+        alignItems: 'flex-end',
+        borderRadius: 'border-radius: 0rem 2rem 2rem 0'
     },
     {
         step: '02',
@@ -15,7 +16,8 @@ export const WorkFlowData = [
         gifLink: '#',
         direction: 'row-reverse',
         align: 'left',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        borderRadius: 'border-radius: 0rem 2rem 2rem 0'
     },
     {
         step: '03',
@@ -24,7 +26,8 @@ export const WorkFlowData = [
         gifLink: '#',
         direction: 'row',
         align: 'right',
-        alignItems: 'flex-end'
+        alignItems: 'flex-end',
+        borderRadius: 'border-radius: 0rem 2rem 2rem 0'
         
     }
 ]

@@ -15,15 +15,16 @@ const WorkFlow = () => {
         <HeaderTag text={"The Future of Video Editing is Now"} />
         <WorkFlowHeading>Springle Elevates Your WorkFlow</WorkFlowHeading>
       </WorkFlowHeaderContainer>
-      {WorkFlowData.map((card) => {
+      {WorkFlowData.map((card, index) => {
         return (
           <WorkFlowCard
+            key={index}
             heading={card.heading}
             direction={card.direction}
             step={card.step}
             align={card.align}
             alignItems={card.alignItems}
-            explaination={card.explanation}
+            explanation={card.explanation}
           />
         );
       })}
