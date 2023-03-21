@@ -12,6 +12,7 @@ const HeaderText = styled.h5`
   font-size: 1rem;
   color: ${props => props.color || '#B1531E'};
   font-weight: 400;
+  text-transform: uppercase;
 `;
 const HeaderLine = styled.div`
   height: 1.5px;
@@ -26,7 +27,7 @@ const HeaderTag = (props) => {
     <>
       <HeaderTagContainer>
         <HeaderText color={color}>{text}</HeaderText>
-        <HeaderLine></HeaderLine>
+        <HeaderLine color={color}></HeaderLine>
       </HeaderTagContainer>
     </>
   );

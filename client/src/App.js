@@ -1,4 +1,5 @@
 import CallToAction from "./components/CallToAction/CallToAction";
+import Demonstration from "./components/Demonstration/Demonstration";
 import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/nav/NavBar";
@@ -10,6 +11,7 @@ function App() {
       <NavBar/>
       <CallToAction />
       <WorkFlow/>
+      <Demonstration/>
       <FAQ/>
       <Footer/>
     </>
