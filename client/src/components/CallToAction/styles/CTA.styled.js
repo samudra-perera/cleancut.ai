@@ -63,8 +63,10 @@ const ButtonText = styled.p`
 `;
 
 //Styling for the Iframe toggled component
-const StyledIFrame = styled.video`
-
+const StyledIFrame = styled.iframe`
+  width: 100vw;
+  background-color: black;
+  height: 100vh;
 `
 
 
@@ -77,4 +79,5 @@ export {
   StyledButton,
   ButtonText,
   PlayButton,
+  StyledIFrame
 };

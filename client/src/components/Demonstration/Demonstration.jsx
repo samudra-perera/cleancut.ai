@@ -7,6 +7,7 @@ import HeaderTag from "../HeaderTag";
 import { DemonstrationContainer } from "./style/Demonstration.style";
 import TabView from "./TabView";
 import TabContent from "./TabContent";
+import { tabInformation } from './TabInformation'
 
 const Demonstration = () => {
   return (
@@ -16,9 +17,9 @@ const Demonstration = () => {
         <WorkFlowHeading>Work Smarter Not Harder</WorkFlowHeading>
       </WorkFlowHeaderContainer>
       <TabView tabs={[
-    {name: 'Camera Motion', content: <TabContent index={'1'}/>},
-    {name: 'Lighting', content: <TabContent index={'2'}/>},
-    {name: 'Composition', content: <TabContent index={'3'}/>},
+    {name: 'Camera Motion', content: <TabContent content={tabInformation[0]}/>},
+    {name: 'Lighting', content: <TabContent content={tabInformation[1]}/>},
+    {name: 'Composition', content: <TabContent content={tabInformation[2]}/>},
 ]}/>
     </DemonstrationContainer>
   );

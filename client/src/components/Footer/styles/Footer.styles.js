@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { StyledLink } from "../../CallToAction/styles/CTA.styled";
 
 const FooterContainer = styled.div`
-  width: 100vw;
   background-color: white;
   display: flex;
   flex-direction: row;

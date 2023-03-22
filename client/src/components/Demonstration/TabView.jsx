@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const TabContainer = styled.div`
-  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,8 +10,10 @@ const TabContainer = styled.div`
 const TabContentContainer = styled.div``;
 
 const TabLabel = styled.label`
-margin: 1rem;
-border-bottom: ${props => props.active ? '1px solid black' : '1px solid white'};
+margin: 3rem;
+padding-bottom: .25rem;
+border-bottom: ${props => props.active ? '2px solid black' : '2px solid white'};
+color: #03004E;
 `
 
 const TabView = ({ tabs }) => {

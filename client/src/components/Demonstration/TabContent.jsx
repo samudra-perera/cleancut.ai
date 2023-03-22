@@ -1,10 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const TabContent = (props) => {
-    const {index} = props
-    console.log(index)
+    const {content} = props
+    console.log(content)
   return (
-    <div>{index}</div>
+    <div>1</div>
   )
 }
 

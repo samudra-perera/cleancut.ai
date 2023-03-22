@@ -9,6 +9,7 @@ import {
   StyledButton,
   ButtonText,
   PlayButton,
+  StyledIFrame
 } from "./styles/CTA.styled";
 import { AiFillPlayCircle } from "react-icons/ai";
 
@@ -17,10 +18,10 @@ const CTA = styled.div`
   font-family: Graphik;
   height: 100vh;
   background-color: #e7e6fd;
-  width: 100%;
   display: flex;
   flex-direction: row;
   color: #03004e;
+  overflow: hidden;
 `;
 
 const CallToAction = () => {
@@ -57,9 +58,12 @@ const CallToAction = () => {
           alt="Image of Spingle"
         />
       </CTA>
-      {toggle && <div>This is where the eventual video tag will go </div>}
+      {toggle && <StyledIFrame src="https://player.vimeo.com/video/746949070?h=37cdccfb3b"></StyledIFrame>}
     </>
   );
 };
 
 export default CallToAction;
+
+{/* <iframe src="https://player.vimeo.com/video/746949070?h=37cdccfb3b" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/746949070">RBC, TIFF &#039;Growing Together&#039;</a> from <a href="https://vimeo.com/liamhiggins">Liam Higgins</a> on <a href="https://vimeo.com">Vimeo</a>.</p> */}

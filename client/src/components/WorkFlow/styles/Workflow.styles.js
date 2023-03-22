@@ -12,7 +12,6 @@ const WorkFlowContainer = styled.div`
     rgba(155, 152, 226, 1) 100%
   );
 
-  width: 100vw;
   height: fit-content;
 `;
 const WorkFlowHeaderContainer = styled(StyledContainer)`

@@ -9,7 +9,6 @@ const FAQLink = styled(StyledLink)`
 `;
 
 const FAQContainerMain = styled.div`
-    width: 100vw;
     background-color: #A09DE4;
 `
 
