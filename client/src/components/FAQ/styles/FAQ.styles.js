@@ -14,12 +14,13 @@ const FAQContainerMain = styled.div`
 
 const FAQContainerSecondary = styled(StyledContainer)`
     margin-bottom: 0rem;
+    margin-top: 0rem;
 `
 
 const FAQHeading = styled(StyledHeading)`
     color: #03004e;
     margin-top: 4.5rem;
-    font-weight: 600;
+    font-family: Graphik-600;
     font-size: 4rem;
 `
 

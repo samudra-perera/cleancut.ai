@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { media } from "../../../style/media";
 //This is the navigation container styling
 //The Nav needs to float over the content and be sticky as the user scrolls through the content
 const NavContainer = styled.div`
@@ -19,6 +19,10 @@ const Nav = styled.nav`
   flex-wrap: wrap;
   z-index: 5;
   margin: 0rem 1rem 0rem 1rem;
+
+  @media ${media.tablet} {
+    padding: .5rem 0rem .5rem 2rem;
+  }
 `;
 
 const Hamburger = styled.div`
@@ -34,8 +38,11 @@ const Hamburger = styled.div`
     border-radius: 5px;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.tablet} {
     display: flex;
+    position: relative;
+    right: 20px;
+    top: 2px;
   }
 `;
 
@@ -49,12 +56,13 @@ const MenuLink = styled.a`
   display: flex;
   cursor: pointer;
   align-items: center;
+  border-bottom: solid white;
 
   &:hover {
     border-bottom: solid black;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.tablet} {
     width: 100%;
     justify-content: center;
     &:hover {
@@ -71,7 +79,7 @@ const Menu = styled.div`
   width: 40%;
   font-family: Graphik;
 
-  @media (max-width: 768px) {
+  @media ${media.tablet} {
     overflow: hidden;
     flex-direction: column;
     width: 100%;
@@ -84,6 +92,12 @@ const Logo = styled.a``;
 
 const LogoImage = styled.img`
   width: 100px;
+  position: relative;
+  top: 3px;
+
+  @media ${media.tablet} {
+    left: -10px;
+  }
 `;
 
 export { Nav, Hamburger, MenuLink, Menu, Logo, LogoImage, NavContainer };

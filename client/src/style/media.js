@@ -4,18 +4,17 @@ import { css } from "styled-components";
 
 //Currently setup as a mobile first design, but should change to desktop first
 const sizes = {
-  uhd: 1980,
-  widescreen: 1366,
-  desktop: 1024,
-  tablet: 768,
+  desktop: '2560px',
+  laptopLarge: '1366px',
+  laptop: '1024px',
+  tablet: '768px',
+  mobile: '425px'
 };
 
-//Function that returns a tagged template literal of the CSS media query for the specified screen sized
-export default Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (min-width: ${sizes[label]}px) {
-      ${css(...args)};
-    }
-  `;
-  return acc;
-}, {});
+export const media = {
+  mobile: `(max-width: ${sizes.mobile})`,
+  tablet: `(max-width: ${sizes.tablet})`,
+  laptop: `(max-width: ${sizes.laptop})`,
+  laptopLarge: `(max-width: ${sizes.laptopLarge})`,
+  desktop: `(max-width: ${sizes.desktop})`,
+}
