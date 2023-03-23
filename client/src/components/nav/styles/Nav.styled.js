@@ -40,9 +40,9 @@ const Hamburger = styled.div`
 `;
 
 const MenuLink = styled.a`
+  font-family: Graphik-500;
   text-decoration: none;
   color: #03004e;
-  font-weight: 500;
   text-transform: uppercase;
   font-size: 0.8rem;
   padding: 1.7rem 1.3rem;

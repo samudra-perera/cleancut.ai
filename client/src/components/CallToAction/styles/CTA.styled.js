@@ -13,19 +13,20 @@ const StyledContainer = styled.div`
   margin: 7rem 6rem;
 `;
 const StyledHeading = styled.h1`
+  font-family: Graphik-700;
   font-size: 4.5rem;
-  margin: .8rem 0;
-  font-weight: 700;
+  margin: 0.8rem 0;
 `;
 
 const StyledParagraph = styled.p`
+  font-family: Graphik-300;
   font-size: 1.1rem;
-  font-weight: 300;
   margin: 1rem 6rem 1rem 0rem;
-  color: #03004E;
+  color: #03004e;
 `;
 
 const StyledLink = styled.a`
+  font-weight: bold;
   color: #03004e;
   cursor: pointer;
   text-decoration: underline;
@@ -67,8 +68,7 @@ const StyledIFrame = styled.iframe`
   width: 100vw;
   background-color: black;
   height: 100vh;
-`
-
+`;
 
 export {
   StyledImage,
@@ -79,5 +79,5 @@ export {
   StyledButton,
   ButtonText,
   PlayButton,
-  StyledIFrame
+  StyledIFrame,
 };

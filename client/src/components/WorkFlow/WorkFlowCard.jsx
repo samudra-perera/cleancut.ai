@@ -26,7 +26,7 @@ const TextContainer = styled.div`
   margin: 7rem; ;
 `;
 const TextHeading = styled(StyledHeading)`
-  font-weight: 600;
+  font-family: Graphik-600;
   color: #03004e;
   line-height: 1.2;
   text-align: ${(props) => props.align || "justify"};
@@ -34,13 +34,14 @@ const TextHeading = styled(StyledHeading)`
 
 const TextSpan = styled.span`
   color: #ff6753;
-  font-weight: 500;
+  font-family: Graphik-500;
 `;
 
 const TextParagraph = styled(StyledParagraph)`
   text-align: ${(props) => props.align || "justify"};
   margin: 1.5rem 0;
   width: 70%;
+  font-family: Graphik-300;
 `;
 
 const TextLink = styled(StyledLink)`

@@ -38,7 +38,7 @@ const AsideLinks = styled.a`
   font-size: 2rem;
   width: 50%;
   cursor: pointer;
-  font-weight: 500;
+  font-family: Graphik-500;
 `;
 
 const TestimonialContent = styled.div`

@@ -8,8 +8,7 @@ const StyledButton = styled.a`
   color: white;
   text-decoration: none;
   border-radius: 2rem;
-  font-family: Graphik;
-  font-weight: 500;
+  font-family: Graphik-500;
 `;
 
 //Button component with a text prop that allows for reusability across the application

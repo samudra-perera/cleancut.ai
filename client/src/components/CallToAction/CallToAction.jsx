@@ -15,7 +15,6 @@ import { AiFillPlayCircle } from "react-icons/ai";
 
 //CTA Containter Div
 const CTA = styled.div`
-  font-family: Graphik;
   height: 100vh;
   background-color: #e7e6fd;
   display: flex;
