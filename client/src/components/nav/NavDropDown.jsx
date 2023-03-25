@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { MenuLinks } from "./MenuLinks";
 import styled from "styled-components";
 import { HiChevronDown } from "react-icons/hi";
+import { media } from "../../style/media";
 
 //Desktop Styles
 const DropDown = styled.div`
   position: relative;
-  top: -20px;
+  top: -18px;
   background-color: white;
-  padding: 1rem 0rem 0rem 2rem;
+  padding: 1.25rem 2rem 0rem 2rem;
   display: flex;
   font-family: Graphik;
   justify-content: space-between;
@@ -20,7 +21,7 @@ const DropDown = styled.div`
   transition: max-height 0.7s ease-in;
   overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media ${media.tablet} {
     display: none;
   }
 `;
@@ -31,6 +32,7 @@ const AsideContent = styled.div`
   flex-wrap: wrap;
   padding: 0.8rem;
   flex-grow: 6;
+  border-top: 0.5px solid #e8e8e8;
 `;
 
 const AsideLinks = styled.a`
@@ -46,6 +48,9 @@ const TestimonialContent = styled.div`
   flex-direction: column;
   flex-grow: 5;
   padding-left: 1.5rem;
+  border-top: 0.5px solid #e8e8e8;
+  border-left: 0.5px solid #e8e8e8;
+  margin-bottom: 1.5rem;
 `;
 
 const TestimonialTitle = styled.h5`
@@ -74,30 +79,40 @@ const MobileDropDown = styled.div`
 const SubMenuLink = styled.a`
   text-decoration: none;
   color: #03004e;
-  font-weight: 500;
+  font-family: Graphik-400;
   text-transform: uppercase;
   font-size: 0.8rem;
   display: flex;
   cursor: pointer;
+  margin: 0.25rem 0;
   align-items: center;
+  border-bottom: .5px solid white;
 
   &:hover {
-    border-bottom: solid black;
+    border-bottom: .5px solid black;
   }
 `;
 
 const TestimonialLink = styled.a`
   text-decoration: none;
   color: #03004e;
-  font-weight: 500;
+  font-family: Graphik-400;
   text-transform: uppercase;
   font-size: 0.8rem;
   display: flex;
   cursor: pointer;
   align-items: center;
+  margin: 0.25rem 0;
+  border-bottom: .5px solid white;
 
   &:hover {
-    border-bottom: solid black;
+    border-bottom: .5px solid black;
+  }
+
+  @media ${media.tablet} {
+    &:hover {
+      border-bottom: none;
+    }
   }
 `;
 

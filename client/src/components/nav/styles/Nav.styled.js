@@ -21,7 +21,7 @@ const Nav = styled.nav`
   margin: 0rem 1rem 0rem 1rem;
 
   @media ${media.tablet} {
-    padding: .5rem 0rem .5rem 2rem;
+    padding: .5rem 0rem 1rem 0rem;
   }
 `;
 
@@ -79,6 +79,14 @@ const Menu = styled.div`
   width: 40%;
   font-family: Graphik;
 
+  @media ${media.laptopLarge} {
+    width: 50%;
+  }
+
+  @media ${media.laptop} {
+    width: 70%;
+  }
+
   @media ${media.tablet} {
     overflow: hidden;
     flex-direction: column;
@@ -96,7 +104,8 @@ const LogoImage = styled.img`
   top: 3px;
 
   @media ${media.tablet} {
-    left: -10px;
+    left: 20px;
+    top: 8px;
   }
 `;
 

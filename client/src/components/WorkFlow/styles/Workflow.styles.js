@@ -16,6 +16,7 @@ const WorkFlowContainer = styled.div`
 `;
 const WorkFlowHeaderContainer = styled(StyledContainer)`
   height: fit-content;
+  margin-top: 0;
 `;
 
 const WorkFlowHeading = styled(StyledHeading)`
