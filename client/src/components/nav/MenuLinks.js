@@ -43,8 +43,8 @@ export const MenuLinks = [
     ]
   },
   {
-    title: "About",
-    url: "/about",
+    title: "Team",
+    url: "/team",
   },
   {
     title: "Sign in",
