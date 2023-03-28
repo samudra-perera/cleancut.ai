@@ -54,6 +54,7 @@ const MenuLink = styled.a`
   font-size: 0.8rem;
   padding: 1.7rem 1.3rem;
   display: flex;
+  margin-right: 3rem;
   cursor: pointer;
   align-items: center;
   border-bottom: solid white;
@@ -63,6 +64,7 @@ const MenuLink = styled.a`
   }
 
   @media ${media.tablet} {
+    margin-right: 0;
     width: 100%;
     justify-content: center;
     &:hover {
@@ -73,10 +75,11 @@ const MenuLink = styled.a`
 
 const Menu = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   width: 40%;
+  margin-right: 2rem;
   font-family: Graphik;
 
   @media ${media.laptopLarge} {
