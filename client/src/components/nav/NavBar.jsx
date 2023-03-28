@@ -10,9 +10,8 @@ import {
 } from "./styles/Nav.styled";
 import Button from "../Button";
 import { MenuLinks } from "./MenuLinks";
-import { NavDropDown, MobileNavDropDown } from "./NavDropDown";
+import { MobileNavDropDown } from "./NavDropDown";
 import { HiChevronDown } from "react-icons/hi";
-import styled from "styled-components";
 
 // const HeaderContainer = styled.header`
 //   width: 100vw;
@@ -43,6 +42,7 @@ const NavBar = () => {
             </Hamburger>
             <Menu isOpen={isOpen}>
               {/* This menulink map takes in the MenuLinks array and returns links based on object information  */}
+              {/* this contains logic for a dropdown menu to be added later if needed in the future */}
               {MenuLinks.map((item, index) => {
                 return (
                   <>
@@ -74,7 +74,7 @@ const NavBar = () => {
             </Menu>
           </Nav>
           {/* Dropdown links is rendered based like this for now...if there are multiple dropdowns this will have to change */}
-          {dropDownOpen && <NavDropDown isOpen={dropDownOpen} />}
+          {/* {dropDownOpen && <NavDropDown isOpen={dropDownOpen} />} */}
         </NavContainer>
       
     </>
