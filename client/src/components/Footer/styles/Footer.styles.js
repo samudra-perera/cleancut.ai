@@ -35,42 +35,9 @@ const FooterLink = styled(StyledLink)`
   color: black;
 `;
 
-const FooterInput = styled.input`
-padding-right: 2rem;
-font-family: Graphik;
-font-size: .8rem;
-font-weight: 300;
-border: none;
-margin: 0 .5rem;
-`;
 
-const FooterForm = styled.form`
-  display: flex;
-  flex-direction: row;
-  border: .5px solid grey;
-  width: fit-content;
-  padding: .2rem;
-  border-radius: 2rem;
-`;
 
-const FooterLinksContainer = styled.div`
-    margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0.8rem;
-  flex-grow: 6;
-`;
 
-const FooterNavLinks = styled.a`
-  padding: 1.5rem 0;
-  font-size: 2rem;
-  width: 50%;
-  cursor: pointer;
-  font-weight: 400;
-  text-decoration: none;
-  color: black;
-`;
 
 
  
@@ -81,8 +48,43 @@ export {
   FooterHeading,
   FooterText,
   FooterLink,
-  FooterInput,
-  FooterForm,
-  FooterNavLinks,
-  FooterLinksContainer
 };
+
+
+// Deprecated Styles - NOT USED
+// const FooterInput = styled.input`
+// padding-right: 2rem;
+// font-family: Graphik;
+// font-size: .8rem;
+// font-weight: 300;
+// border: none;
+// margin: 0 .5rem;
+// `;
+
+// const FooterForm = styled.form`
+//   display: flex;
+//   flex-direction: row;
+//   border: .5px solid grey;
+//   width: fit-content;
+//   padding: .2rem;
+//   border-radius: 2rem;
+// `;
+
+// const FooterLinksContainer = styled.div`
+//     margin-top: 2rem;
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   padding: 0.8rem;
+//   flex-grow: 6;
+// `;
+
+// const FooterNavLinks = styled.a`
+//   padding: 1.5rem 0;
+//   font-size: 2rem;
+//   width: 50%;
+//   cursor: pointer;
+//   font-weight: 400;
+//   text-decoration: none;
+//   color: black;
+// `;

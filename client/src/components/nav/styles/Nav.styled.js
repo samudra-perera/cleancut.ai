@@ -42,7 +42,7 @@ const Hamburger = styled.div`
     display: flex;
     position: relative;
     right: 20px;
-    top: 2px;
+    top: 5px;
   }
 `;
 
