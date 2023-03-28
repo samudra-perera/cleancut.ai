@@ -1,6 +1,6 @@
 import CallToAction from "./components/CallToAction/CallToAction";
-import Demonstration from "./components/Demonstration/Demonstration";
-import FAQ from "./components/FAQ/FAQ";
+// import Demonstration from "./components/Demonstration/Demonstration";
+// import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/nav/NavBar";
 import WorkFlow from "./components/WorkFlow/WorkFlow";
@@ -12,8 +12,8 @@ function App() {
       <NavBar/>
       <CallToAction />
       <WorkFlow/>
-      <Demonstration/>
-      <FAQ/>
+      {/* <Demonstration/> */}
+      {/* <FAQ/> */}
       <Footer/>
     </>
   );
