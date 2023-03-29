@@ -1,9 +1,26 @@
 import styled from "styled-components";
+import { media } from "../../../style/media";
 
 const StyledImage = styled.img`
   flex-grow: 5;
-  height: auto;
-  width: auto;
+  max-height: 800px;
+  max-width: 800px;
+  @media ${media.laptopLarge} {
+    height: auto;
+    width: 65%;
+    margin: 3rem 0;
+  }
+
+  @media ${media.laptop} {
+    height: auto;
+    width: 50%;
+  }
+
+  @media ${media.tablet} {
+    margin-bottom: 0;
+    height: 50%;
+    width: auto;
+  }
 `;
 
 const StyledContainer = styled.div`
@@ -11,11 +28,27 @@ const StyledContainer = styled.div`
   flex-direction: column;
   flex-grow: 4;
   margin: 7rem 6rem;
+
+  @media ${media.laptopLarge} {
+    justify-content: center;
+    margin: 3rem 4rem;
+  }
+
+  @media ${media.tablet} {
+    align-items: center;
+    margin-top: 1rem;
+  }
 `;
+
 const StyledHeading = styled.h1`
   font-family: Graphik-700;
   font-size: 4.5rem;
   margin: 0.8rem 0;
+
+  @media ${media.laptopLarge} {
+    font-size: 3.2rem;
+    margin: .5rem 0;
+  }
 `;
 
 const StyledParagraph = styled.p`
@@ -23,6 +56,15 @@ const StyledParagraph = styled.p`
   font-size: 1.1rem;
   margin: 1rem 6rem 1rem 0rem;
   color: #03004e;
+
+  @media ${media.laptopLarge} {
+    font-size: .9rem;
+  }
+
+  @media ${media.tablet} {
+    text-align: center;
+    margin: .5rem;
+  }
 `;
 
 const StyledLink = styled.a`

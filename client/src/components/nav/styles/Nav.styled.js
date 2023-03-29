@@ -96,6 +96,7 @@ const Menu = styled.div`
     width: 100%;
     max-height: ${({ isOpen }) => (isOpen ? "1000px" : "0")};
     transition: max-height 0.3s ease-in;
+    margin-right: 0;
   }
 `;
 
