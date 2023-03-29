@@ -1,9 +1,12 @@
 //When the trailer is released we can uncomment the code and link the vimeo file to the trailer
+//Add Second call to action button for signup when mobile
 
 import React, { useState } from "react";
 import styled from "styled-components";
 import { media } from "../../style/media";
+import Button from "../Button";
 import {
+  CTAButton,
   StyledContainer,
   StyledHeading,
   StyledImage,
@@ -60,6 +63,7 @@ const CallToAction = () => {
               <ButtonText>Watch the Trailer</ButtonText>
             </PlayButton>
           </StyledButton> */}
+          <CTAButton>Start Free Trial</CTAButton>
         </StyledContainer>
         <StyledImage
           src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1678816665/spinle_CTA_k0bomc.png"

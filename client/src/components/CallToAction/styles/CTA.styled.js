@@ -21,6 +21,11 @@ const StyledImage = styled.img`
     height: 50%;
     width: auto;
   }
+
+  @media ${media.mobile} {
+    height: 30%;
+    width: auto;
+  }
 `;
 
 const StyledContainer = styled.div`
@@ -38,6 +43,10 @@ const StyledContainer = styled.div`
     align-items: center;
     margin-top: 1rem;
   }
+
+  @media ${media.mobile} {
+    margin-top: 0;
+  }
 `;
 
 const StyledHeading = styled.h1`
@@ -47,7 +56,11 @@ const StyledHeading = styled.h1`
 
   @media ${media.laptopLarge} {
     font-size: 3.2rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
+  }
+
+  @media ${media.mobile} {
+    font-size: 2.5rem;
   }
 `;
 
@@ -58,12 +71,12 @@ const StyledParagraph = styled.p`
   color: #03004e;
 
   @media ${media.laptopLarge} {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   @media ${media.tablet} {
     text-align: center;
-    margin: .5rem;
+    margin: 0.5rem;
   }
 `;
 
@@ -105,6 +118,22 @@ const ButtonText = styled.p`
   margin: 0;
 `;
 
+const CTAButton = styled.a`
+  background-color: #f8705d;
+  font-size: 0.8rem;
+  padding: 0.6rem 2rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 2rem;
+  font-family: Graphik-500;
+  margin-top: .5rem;
+  display: none;
+
+  @media ${media.tablet} {
+    display: block;
+  }
+`;
+
 //Styling for the Iframe toggled component
 const StyledIFrame = styled.iframe`
   width: 100vw;
@@ -122,4 +151,5 @@ export {
   ButtonText,
   PlayButton,
   StyledIFrame,
+  CTAButton,
 };
