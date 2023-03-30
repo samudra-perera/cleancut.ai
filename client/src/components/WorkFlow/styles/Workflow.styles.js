@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../../style/media";
 import {
   StyledContainer,
   StyledHeading,
@@ -25,6 +26,12 @@ const WorkFlowHeading = styled(StyledHeading)`
   text-transform: uppercase;
   margin-top: 0.5rem;
   line-height: 1.3;
+
+  @media ${media.tablet} {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+  }
 `;
 
 export { WorkFlowContainer, WorkFlowHeaderContainer, WorkFlowHeading };

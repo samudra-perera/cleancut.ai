@@ -7,7 +7,7 @@ import Error from "./pages/Error";
 import SignIn from "./pages/SignIn";
 
 //front end routing for Cleancut, this will handle all the page renders and Navigation links
-//Doing using v6 object notation
+//Done using v6 object notation
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "/about  ",
+    path: "/about",
     element: <Team/>,
     errorElement: <Error />,
   },
