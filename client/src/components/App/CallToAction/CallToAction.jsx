@@ -3,8 +3,8 @@
 
 import React, { useState } from "react";
 import styled from "styled-components";
-import { media } from "../../style/media";
-import Button from "../Button";
+import { media } from "../../../style/media";
+import Button from "../../SharedComponents/Button";
 import {
   CTAButton,
   StyledContainer,

@@ -1,7 +1,7 @@
 //Add Smooth Slide down transition for the dropdown
 import React, { useState } from "react";
 import styled from "styled-components";
-import { StyledParagraph } from "../CallToAction/styles/CTA.styled";
+import { StyledParagraph } from "../App/CallToAction/styles/CTA.styled";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 
 const DropDownTitle = styled(StyledParagraph)`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../../../style/media";
+import { media } from "../../../../style/media";
 
 const StyledImage = styled.img`
   flex-grow: 5;

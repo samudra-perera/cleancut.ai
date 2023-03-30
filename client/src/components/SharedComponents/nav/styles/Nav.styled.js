@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../../../style/media";
+import { media } from "../../../../style/media";
 //This is the navigation container styling
 //The Nav needs to float over the content and be sticky as the user scrolls through the content
 const NavContainer = styled.div`

@@ -8,7 +8,7 @@ import {
   LogoImage,
   NavContainer,
 } from "./styles/Nav.styled";
-import Button from "../Button";
+import Button from '../Button'
 import { MenuLinks } from "./MenuLinks";
 import { MobileNavDropDown } from "./NavDropDown";
 import { HiChevronDown } from "react-icons/hi";

@@ -1,6 +1,6 @@
 import React from 'react'
-import NavBar from '../components/nav/NavBar'
-import TeamCTA from '../components/TeamCTA/TeamCTA'
+import NavBar from '../components/SharedComponents/nav/NavBar'
+import TeamCTA from '../components/AboutPage/TeamCTA/TeamCTA'
 
 const Team = () => {
   return (

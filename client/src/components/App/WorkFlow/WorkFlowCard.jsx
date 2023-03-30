@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { media } from "../../style/media";
+import { media } from "../../../style/media";
 import {
   StyledHeading,
   StyledLink,
   StyledParagraph,
-} from "../CallToAction/styles/CTA.styled";
+} from '../CallToAction/styles/CTA.styled'
 
 const CardContainer = styled.div`
   display: flex;

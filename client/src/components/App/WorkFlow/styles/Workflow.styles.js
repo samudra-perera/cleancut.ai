@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { media } from "../../../style/media";
+import { media } from "../../../../style/media";
 import {
   StyledContainer,
   StyledHeading,
-} from "../../CallToAction/styles/CTA.styled";
+} from '../../CallToAction/styles/CTA.styled'
 
 const WorkFlowContainer = styled.div`
   background: linear-gradient(

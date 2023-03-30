@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { media } from "../style/media";
+import { media } from "../../style/media";
 
 const HeaderTagContainer = styled.div`
   margin-top: 4rem;

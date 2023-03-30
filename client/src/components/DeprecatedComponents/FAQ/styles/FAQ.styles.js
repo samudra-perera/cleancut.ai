@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledContainer, StyledHeading, StyledLink } from "../../CallToAction/styles/CTA.styled";
+import { StyledContainer, StyledHeading, StyledLink } from "../../App/CallToAction/styles/CTA.styled";
 
 const FAQLink = styled(StyledLink)`
   font-size: 1.1rem;

@@ -4,7 +4,7 @@ import {
   WorkFlowHeaderContainer,
   WorkFlowHeading,
 } from "./styles/Workflow.styles";
-import HeaderTag from "../HeaderTag";
+import HeaderTag from "../../SharedComponents/HeaderTag";
 import { WorkFlowData } from "./WorkFlowData";
 import WorkFlowCard from "./WorkFlowCard";
 
