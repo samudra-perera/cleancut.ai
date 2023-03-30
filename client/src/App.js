@@ -11,7 +11,7 @@ function App() {
     <>
       <NavBar/>
       <CallToAction />
-      {/* <WorkFlow/> */}
+      <WorkFlow/>
       {/* <Demonstration/> */}
       {/* <FAQ/> */}
       {/* <Footer/> */}

@@ -26,6 +26,7 @@ const WorkFlow = () => {
             alignItems={card.alignItems}
             explanation={card.explanation}
             borderRadius={card.borderRadius}
+            gifLink={card.gifLink}
           />
         );
       })}
