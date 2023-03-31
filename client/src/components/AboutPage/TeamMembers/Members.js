@@ -59,4 +59,14 @@ export const Members = [
         ],
         headshotURL: '#',
     },
+    // {
+    //     name: 'Samudra Perera',
+    //     title: 'Full Stack Developer',
+    //     accomplishments: [
+    //         'BASc in Civil Engineering, University of Waterloo',
+    //         '2 years of Full Stack Experience',
+    //         '5 years of experience in project managment, consulting and stakeholder managment',
+    //     ],
+    //     headshotURL: '#',
+    // },
 ]
