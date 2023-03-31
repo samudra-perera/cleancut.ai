@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledLink } from "../../App/CallToAction/styles/CTA.styled";
+import { StyledLink } from '../../../App/CallToAction/styles/CTA.styled';
 
 const FooterContainer = styled.div`
   background-color: white;
