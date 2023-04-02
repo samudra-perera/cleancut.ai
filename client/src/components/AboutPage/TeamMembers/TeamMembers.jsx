@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HeaderTag from "../../SharedComponents/HeaderTag";
 import { Members } from "./Members";
-import { TeamContainer, TeamHeader, TeamParagraph } from "./style/Team.style";
+import { TeamContainer, TeamHeader, TeamParagraph, MemberContainer } from "./style/Team.style";
 import MemberCard from "./MemberCard";
 
 const TeamMembersContainer = styled.div`
@@ -21,11 +21,19 @@ const TeamMembers = () => {
           companies in the world .... (Amazon, Asana, etc)
         </TeamParagraph>
       </TeamContainer>
-      {
-        Members.map((member, index) => {
-          return (<MemberCard key={index} name={member.name} title={member.title}/>)
-        })
-      }
+      <MemberContainer>
+        {Members.map((member, index) => {
+          return (
+            <MemberCard
+              key={index}
+              name={member.name}
+              title={member.title}
+              headShotURL={member.headshotURL}
+              accomplishments={member.accomplishments}
+            />
+          );
+        })}
+      </MemberContainer>
     </TeamMembersContainer>
   );
 };
