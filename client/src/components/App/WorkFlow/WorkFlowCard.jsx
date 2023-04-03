@@ -147,7 +147,7 @@ const WorkFlowCard = (props) => {
         <TextSpan>{step}</TextSpan>
         <TextHeading align={align}>{heading}</TextHeading>
         <TextParagraph align={align}>{explanation}</TextParagraph>
-        {step === "03" ? <TextLink href="#">Learn More {">"}</TextLink> : <></>}
+        {/* {step === "03" ? <TextLink href="#">Learn More {">"}</TextLink> : <></>} */}
       </TextContainer>
     </CardContainer>
   );
