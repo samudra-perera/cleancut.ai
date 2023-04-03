@@ -55,6 +55,10 @@ const TextContainer = styled.div`
   justify-content: center;
   flex-grow: 1;
 
+  @media ${media.laptop} {
+    margin: 5rem;
+  }
+
   @media ${media.tablet} {
     margin: 2rem;
     align-items: center;
@@ -112,7 +116,7 @@ const CardIframe = styled.img`
   }
 
   @media ${media.tablet} {
-    height: 320px;
+    height: 310px;
   }
 
   @media ${media.mobile} {

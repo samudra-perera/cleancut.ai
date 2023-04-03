@@ -21,7 +21,7 @@ const Nav = styled.nav`
   margin: 0rem 1rem 0rem 1rem;
 
   @media ${media.tablet} {
-    padding: .5rem 0rem 1rem 0rem;
+    padding: 0.5rem 0rem 1rem 0rem;
   }
 `;
 
@@ -103,13 +103,14 @@ const Menu = styled.div`
 const Logo = styled.a``;
 
 const LogoImage = styled.img`
-  width: 100px;
+  height: auto;
+  width: 150px;
   position: relative;
-  top: 3px;
 
   @media ${media.tablet} {
+    width: 150px;
     left: 20px;
-    top: 8px;
+    top: 5px;
   }
 `;
 

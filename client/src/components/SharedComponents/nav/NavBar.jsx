@@ -31,7 +31,7 @@ const NavBar = () => {
         <Nav>
           <Logo href="/">
             <LogoImage
-              src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1678492371/cleancut_logo_jhcvuf.png"
+              src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1680553851/CleancutAssets/cleancut_logo_lxt0hp.png"
               alt="Cleancut.ai Logo"
             />
           </Logo>

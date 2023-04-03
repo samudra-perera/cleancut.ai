@@ -1,23 +1,14 @@
 export const jobs = [
     {
-        title: 'Tech Lead',
+        title: 'Computer Vision Engineer',
         href: '#'
     },
     {
-        title: 'Product Designer',
+        title: 'AI Engineer',
         href: '#'
     },
     {
-        title: 'Infrastructure/Platform Engineer',
+        title: 'Product Manager',
         href: '#'
     },
-    {
-        title: 'Backend Engineer',
-        href: '#'
-    },
-    {
-        title: 'Video Pipeline Engineer',
-        href: '#'
-    },
-
 ]

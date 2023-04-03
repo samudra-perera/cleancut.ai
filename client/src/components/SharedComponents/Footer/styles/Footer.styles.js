@@ -1,10 +1,18 @@
 import styled from "styled-components";
 import { StyledLink } from '../../../App/CallToAction/styles/CTA.styled';
+import { media } from "../../../../style/media";
 
 const FooterContainer = styled.div`
   background-color: white;
   display: flex;
   flex-direction: row;
+  padding: 1rem 0;
+
+  @media ${media.mobile} {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
 `;
 const FooterContentContainer = styled.div`
   width: 50%;
@@ -13,12 +21,29 @@ const FooterContentContainer = styled.div`
   padding: 1.5rem 3rem 1.5rem 1.5rem;
   border-right: ${({ left }) => (left ? ".5px solid grey" : "none")};
   display: flex;
+
+  @media ${media.tablet} {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  @media ${media.mobile} {
+    border-right: none;
+    width: 80%;
+    /* border-top: ${({ left }) => (left ? ".5px solid grey" : "none")}; */
+    padding-bottom: 1.5rem;
+  }
+
 `;
 
 const FooterHeading = styled.h5`
   margin: 0;
   font-size: 1.2rem;
   font-weight: 400;
+
+  @media ${media.tablet} {
+    font-size: 1rem;
+  }
 `;
 
 const FooterText = styled.p.attrs((props) => ({
@@ -27,20 +52,40 @@ const FooterText = styled.p.attrs((props) => ({
   font-size: 1rem;
   font-weight: 300;
   line-height: ${(props) => props.size};
+
+  @media ${media.tablet} {
+    line-height: 1.5;
+    font-size: .8rem;
+  }
+
 `;
+
+const FooterLogo = styled.img`
+  width: 200px;
+  height: auto;
+
+  @media ${media.tablet} {
+    width: 150px;
+  }
+
+  @media ${media.mobile} {
+    padding-top: 2.5rem;
+  }
+
+`
+
 
 //this refers to the job links 
 const FooterLink = styled(StyledLink)`
   padding: 0.5rem 0;
   color: black;
+
+  @media ${media.tablet} {
+    font-size: .8rem;
+  }
+
 `;
 
-
-
-
-
-
- 
 
 export {
   FooterContainer,
@@ -48,6 +93,7 @@ export {
   FooterHeading,
   FooterText,
   FooterLink,
+  FooterLogo
 };
 
 
