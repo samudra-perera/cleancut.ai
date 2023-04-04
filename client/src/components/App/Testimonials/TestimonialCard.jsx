@@ -1,8 +1,20 @@
 import React from 'react'
+import { CardContainer, CardQuote, AvatarContainer, Avatar, AvatarTextContainer, AvatarName, AvatarSpan } from './style/TestimonialCard.style'
 
-const TestimonialCard = () => {
+
+const TestimonialCard = (props) => {
+    const {name, span, quote, avatarURL  } = props
   return (
-    <div>TestimonialCard</div>
+    <CardContainer>
+        <CardQuote>{quote}</CardQuote>
+        <AvatarContainer>
+            <Avatar src={avatarURL}/>
+            <AvatarTextContainer>
+                <AvatarName>{name}</AvatarName>
+                <AvatarSpan>{span}</AvatarSpan>
+            </AvatarTextContainer>
+        </AvatarContainer>
+    </CardContainer>
   )
 }
 

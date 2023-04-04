@@ -22,3 +22,8 @@
     font-family: 'Graphik-600';
     src: url('./components/fonts/Graphik-Semibold.otf');
 }
+
+@font-face {
+    font-family: 'Graphik-300-italic';
+    src: url('./components/fonts/Graphik-LightItalic.otf');
+}

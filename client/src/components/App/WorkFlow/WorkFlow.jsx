@@ -7,6 +7,7 @@ import {
 import HeaderTag from "../../SharedComponents/HeaderTag";
 import { WorkFlowData } from "./WorkFlowData";
 import WorkFlowCard from "./WorkFlowCard";
+import Testimonials from "../Testimonials/Testimonials";
 
 const WorkFlow = () => {
   return (
@@ -30,6 +31,7 @@ const WorkFlow = () => {
           />
         );
       })}
+      <Testimonials />
     </WorkFlowContainer>
   );
 };
