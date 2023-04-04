@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.a`
-  background-color: #f8705d;
+  background-color: #943CFF;
   font-size: .8rem;
   padding: .6rem 2rem;
   color: white;
   text-decoration: none;
   border-radius: 2rem;
   font-family: Graphik-500;
+  z-index: 3;
 `;
 
 //Button component with a text prop that allows for reusability across the application
@@ -16,11 +17,11 @@ const StyledButton = styled.a`
 const Button = (props) => {
     //The Text prop renders what will be seen in the button
     //To prop will render the link, has to include http
-  const { text, to } = props;
+  const { text, to, type } = props;
 
   return (
     <>
-      <StyledButton href={to ? to : '#'}>{text}</StyledButton>
+      <StyledButton href={to ? to : '#'} type={type ? type : null}>{text}</StyledButton>
     </>
   );
 };

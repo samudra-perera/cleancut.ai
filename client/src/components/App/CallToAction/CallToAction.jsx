@@ -18,6 +18,8 @@ import {
   // StyledIFrame
 } from "./styles/CTA.styled";
 // import { AiFillPlayCircle } from "react-icons/ai";
+import EmailForm from "../../SharedComponents/EmailForm";
+
 
 //CTA Containter Div
 const CTA = styled.div`
@@ -49,12 +51,12 @@ const CallToAction = () => {
             Let Spingle (our AI) watch your footage and separate the good from
             the shaky.
           </StyledParagraph>
-          <StyledParagraph>
+          {/* <StyledParagraph>
             Get access to the beta through our{" "}
             <StyledLink href="https://www.google.com">
               Early Adopter Program
             </StyledLink>
-          </StyledParagraph>
+          </StyledParagraph> */}
           {/* <StyledButton onClick={() => setToggle(!toggle)}>
             <PlayButton>
               <AiFillPlayCircle size="45px" />
@@ -64,6 +66,7 @@ const CallToAction = () => {
             </PlayButton>
           </StyledButton> */}
           <CTAButton>Start Free Trial</CTAButton>
+          <EmailForm/>
         </StyledContainer>
         <StyledImage
           src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1678816665/spinle_CTA_k0bomc.png"
