@@ -27,3 +27,8 @@
     font-family: 'Graphik-300-italic';
     src: url('./components/fonts/Graphik-LightItalic.otf');
 }
+
+@font-face {
+    font-family: 'Graphik-500-italic';
+    src: url('./components/fonts/Graphik-SemiboldItalic.otf');
+}
