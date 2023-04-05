@@ -6,14 +6,13 @@ import NavBar from './components/SharedComponents/nav/NavBar'
 import WorkFlow from "./components/App/WorkFlow/WorkFlow";
 import '../src/index.css'
 
+
 function App() {
   return (
     <>
       <NavBar/>
       <CallToAction />
       <WorkFlow/>
-      {/* <Demonstration/> */}
-      {/* <FAQ/> */}
       <Footer/>
     </>
   );
