@@ -21,7 +21,7 @@ const TestimonialCard = (props) => {
           <AvatarTextContainer>
             <AvatarName>{name}</AvatarName>
             {span.map((span, index) => {
-              return <AvatarSpan>{span}</AvatarSpan>;
+              return <AvatarSpan key={index}>{span}</AvatarSpan>;
             })}
           </AvatarTextContainer>
         </AvatarContainer>

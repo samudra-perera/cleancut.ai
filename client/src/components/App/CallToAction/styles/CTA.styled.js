@@ -49,15 +49,20 @@ const StyledContainer = styled.div`
   }
 `;
 
+const StyledCTAContainer = styled(StyledContainer)`
+padding: 4rem;
+height: 50%;
+justify-content: space-around;
+`
+
 const StyledHeading = styled.h1`
   font-family: Graphik-700;
   font-size: 4.5rem;
-  margin: 0.8rem 0;
+  margin: 0rem 0;
   color: #121212;
 
   @media ${media.laptopLarge} {
     font-size: 3.2rem;
-    margin: 0.5rem 0;
   }
 
   @media ${media.mobile} {
@@ -144,6 +149,7 @@ const StyledIFrame = styled.iframe`
 
 export {
   StyledImage,
+  StyledCTAContainer,
   StyledContainer,
   StyledHeading,
   StyledParagraph,

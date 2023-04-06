@@ -8,9 +8,10 @@ import {
 const WorkFlowContainer = styled.div`
   background: linear-gradient(
     180deg,
-    rgba(251, 251, 255, 1) 0%,
-    rgba(231, 230, 253, 1) 50%,
-    rgba(155, 152, 226, 1) 100%
+    rgba(255, 255, 255, 1) 0%,
+    rgba(189, 186, 255, 1) 40%,
+    rgba(189, 186, 255, 1) 70%,
+    rgba(241, 241, 255, 1) 100%
   );
 
   height: fit-content;
