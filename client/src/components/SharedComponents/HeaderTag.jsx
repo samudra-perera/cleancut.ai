@@ -18,24 +18,16 @@ const HeaderTagContainer = styled.div`
 
 const HeaderText = styled.h5`
   font-size: 1rem;
-  color: ${props => props.color || '#B1531E'};
-  font-family: Graphik-400;
+  color: ${props => props.color || '#4A01A4'};
+  font-family: Graphik-500;
   text-transform: uppercase;
+  margin: 0;
 
   @media ${media.tablet} {
     margin: 1rem 0;
   }
 `;
-const HeaderLine = styled.div`
-  height: 1.5px;
-  background-color: ${props => props.color || '#B1531E'};
-  flex-grow: 1;
-  margin-left: 0.5rem;
 
-  @media ${media.tablet} {
-    width: 100%;
-  }
-`;
 
 const HeaderTag = (props) => {
   const { text, color } = props;
@@ -43,7 +35,6 @@ const HeaderTag = (props) => {
     <>
       <HeaderTagContainer>
         <HeaderText color={color}>{text}</HeaderText>
-        <HeaderLine color={color}></HeaderLine>
       </HeaderTagContainer>
     </>
   );

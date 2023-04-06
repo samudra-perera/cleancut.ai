@@ -3,7 +3,7 @@ import { media } from "../../../../style/media";
 import {
   StyledContainer,
   StyledHeading,
-} from '../../CallToAction/styles/CTA.styled'
+} from "../../CallToAction/styles/CTA.styled";
 
 const WorkFlowContainer = styled.div`
   background: linear-gradient(
@@ -18,14 +18,15 @@ const WorkFlowContainer = styled.div`
 const WorkFlowHeaderContainer = styled(StyledContainer)`
   height: fit-content;
   margin-top: 0;
+  padding-bottom: 10rem;
 `;
 
 const WorkFlowHeading = styled(StyledHeading)`
-  color: #03004e;
-  width: 60%;
-  text-transform: uppercase;
-  margin-top: 0.5rem;
+  font-family: Graphik-600;
+  width: 100%;
+  font-size: 3.5rem;
   line-height: 1.3;
+  margin: 0;
 
   @media ${media.tablet} {
     width: 100%;

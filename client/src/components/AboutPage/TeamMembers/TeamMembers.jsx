@@ -14,7 +14,7 @@ const TeamMembers = () => {
   return (
     <TeamMembersContainer>
       <TeamContainer>
-        <HeaderTag text={"Founded by friends, powered by visionaries"} />
+        <HeaderTag text={"About Us"} />
         <TeamHeader>Meet the Team</TeamHeader>
         <TeamParagraph>
           Our team has previously worked at some of the largest engineering

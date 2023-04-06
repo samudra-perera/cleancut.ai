@@ -40,16 +40,16 @@ const TestimonialCardContainer = styled.div`
   }
 `;
 
-const TestimonialDivider = styled.div`
-  height: 3px;
-  width: 90%;
-  background-color: white;
-  margin-top: 5rem;
-`;
+// const TestimonialDivider = styled.div`
+//   height: 3px;
+//   width: 90%;
+//   background-color: white;
+//   margin-top: 5rem;
+// `;
 
 export {
   TestimonialCardContainer,
-  TestimonialDivider,
+//   TestimonialDivider,
   TestimonialHeader,
   TestimonialContainer,
 };

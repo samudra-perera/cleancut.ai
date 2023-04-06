@@ -1,6 +1,6 @@
 import React from "react";
 import { TestimonialInformation } from "./TestimonialInformation";
-import { TestimonialContainer, TestimonialDivider, TestimonialHeader, TestimonialCardContainer } from "./style/Testimonials.style";
+import { TestimonialContainer, TestimonialHeader, TestimonialCardContainer } from "./style/Testimonials.style";
 import styled from "styled-components";
 import TestimonialCard from "./TestimonialCard";
 
@@ -9,7 +9,6 @@ import TestimonialCard from "./TestimonialCard";
 const Testimonials = () => {
   return (
     <TestimonialContainer>
-      <TestimonialDivider />
       <TestimonialHeader>
         Join others in using CleanCut today to blah blah blah it’s the best
         thing to use and save your time

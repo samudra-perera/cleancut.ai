@@ -32,7 +32,7 @@ const Hamburger = styled.div`
   color: black;
 
   span {
-    border: 2px solid #f8705d;
+    border: 2px solid #4A01A4;
     width: 25px;
     margin-bottom: 4px;
     border-radius: 5px;
