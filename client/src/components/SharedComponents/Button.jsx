@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.a`
-  background-color: #943CFF;
+  background-color: #721ED8;
   font-size: .8rem;
   padding: .6rem 2rem;
   color: white;

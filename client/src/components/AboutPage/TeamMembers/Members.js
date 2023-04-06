@@ -71,15 +71,4 @@ export const Members = [
       "https://res.cloudinary.com/dkrjwbr8w/image/upload/v1680468554/shrey_a9nkb0.png",
     linkedIn: "#",
   },
-  // {
-  //     name: 'Samudra Perera',
-  //     title: 'Full Stack Developer',
-  //     accomplishments: [
-  //         'BASc in Civil Engineering, University of Waterloo',
-  //         '2 years of Full Stack Experience',
-  //         '5 years of experience in project managment, consulting and stakeholder managment',
-  //     ],
-  //     headshotURL: '#',
-  //      linkedIn: '#'
-  // },
 ];

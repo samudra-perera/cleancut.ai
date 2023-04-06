@@ -19,17 +19,17 @@ const EmailInput = styled.input`
 const FooterForm = styled.form`
   display: flex;
   flex-direction: row;
-  border: 0.5px solid #943cff;
+  border: 0.5px solid #721ED8;
   width: fit-content;
-  padding: 0.1rem;
+  padding: 0.12rem;
   border-radius: 2rem;
   background-color: white;
 `;
 
 const StyledButton = styled.button`
-  background-color: #943cff;
+  background-color: #721ED8;
   font-size: 0.8rem;
-  padding: 0.6rem 2rem;
+  padding: .7rem 2rem;
   color: white;
   text-decoration: none;
   border-radius: 2rem;

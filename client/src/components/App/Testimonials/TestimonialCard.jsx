@@ -1,21 +1,33 @@
-import React from 'react'
-import { CardContainer, CardQuote, AvatarContainer, Avatar, AvatarTextContainer, AvatarName, AvatarSpan } from './style/TestimonialCard.style'
-
+import React from "react";
+import {
+  CardBorder,
+  CardQuote,
+  AvatarContainer,
+  Avatar,
+  AvatarTextContainer,
+  AvatarName,
+  AvatarSpan,
+  CardContainer,
+} from "./style/TestimonialCard.style";
 
 const TestimonialCard = (props) => {
-    const {name, span, quote, avatarURL  } = props
+  const { name, span, quote, avatarURL } = props;
   return (
-    <CardContainer>
+    <CardBorder>
+      <CardContainer>
         <CardQuote>{quote}</CardQuote>
         <AvatarContainer>
-            <Avatar src={avatarURL}/>
-            <AvatarTextContainer>
-                <AvatarName>{name}</AvatarName>
-                <AvatarSpan>{span}</AvatarSpan>
-            </AvatarTextContainer>
+          <Avatar src={avatarURL} />
+          <AvatarTextContainer>
+            <AvatarName>{name}</AvatarName>
+            {span.map((span, index) => {
+              return <AvatarSpan>{span}</AvatarSpan>;
+            })}
+          </AvatarTextContainer>
         </AvatarContainer>
-    </CardContainer>
-  )
-}
+      </CardContainer>
+    </CardBorder>
+  );
+};
 
-export default TestimonialCard
+export default TestimonialCard;

@@ -53,6 +53,7 @@ const StyledHeading = styled.h1`
   font-family: Graphik-700;
   font-size: 4.5rem;
   margin: 0.8rem 0;
+  color: #121212;
 
   @media ${media.laptopLarge} {
     font-size: 3.2rem;
@@ -68,7 +69,7 @@ const StyledParagraph = styled.p`
   font-family: Graphik-300;
   font-size: 1.1rem;
   margin: 1rem 6rem 1rem 0rem;
-  color: #03004e;
+  color: #222222;
 
   @media ${media.laptopLarge} {
     font-size: 0.9rem;
@@ -119,7 +120,7 @@ const ButtonText = styled.p`
 `;
 
 const CTAButton = styled.a`
-  background-color: #f8705d;
+  background-color: #721ED8;
   font-size: 0.8rem;
   padding: 0.6rem 2rem;
   color: white;

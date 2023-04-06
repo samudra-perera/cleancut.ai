@@ -2,15 +2,34 @@ import styled from "styled-components";
 import { media } from "../../../../style/media";
 import { StyledParagraph } from "../../CallToAction/styles/CTA.styled";
 
-const CardContainer = styled.div`
-  width: 35%;
-  background-color: white;
+const CardBorder = styled.div`
+  width: 40%;
+  background-color: #ebedff;
   margin: 1.5rem;
-  padding: 1.5rem;
-  border-radius: 1rem;
-
+  padding: 1.1rem;
+  border-radius: 1.5rem;
   @media ${media.tablet} {
     width: 100%;
+  }
+`;
+
+const CardContainer = styled.div`
+  background-color: white;
+  padding: 1rem 1rem 1rem 1.7rem;
+  border-radius: 1rem;
+  height: inherit;
+  min-height: 280px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+  @media ${media.tablet} {
+    min-height: 200px;
+    padding: 1rem;
+  }
+
+  @media ${media.mobile} {
+    min-height: 310px;
   }
 `;
 
@@ -18,7 +37,7 @@ const CardQuote = styled(StyledParagraph)`
   font-size: 1.1rem;
   width: 90%;
   line-height: 1.4;
-  padding-top: 0.5rem;
+  font-family: Graphik-400;
 
   @media ${media.tablet} {
     width: 100%;
@@ -31,8 +50,8 @@ const CardQuote = styled(StyledParagraph)`
 const AvatarContainer = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 2rem 0 1.5rem 0;
-
+  padding-left: 0.5rem;
+  align-items: center;
   @media ${media.tablet} {
     padding-bottom: 0;
   }
@@ -40,13 +59,14 @@ const AvatarContainer = styled.div`
 
 const Avatar = styled.img`
   border-radius: 50%;
-  height: 90px;
+  height: 70px;
   width: auto;
 `;
 
 const AvatarName = styled.span`
   font-family: Graphik-500-italic;
   font-size: 0.9rem;
+  padding-bottom: 0.8rem;
 `;
 const AvatarSpan = styled.span`
   font-family: Graphik-300-italic;
@@ -61,11 +81,12 @@ const AvatarTextContainer = styled.div`
 `;
 
 export {
-  CardContainer,
+  CardBorder,
   CardQuote,
   AvatarContainer,
   Avatar,
   AvatarTextContainer,
   AvatarSpan,
   AvatarName,
+  CardContainer,
 };
