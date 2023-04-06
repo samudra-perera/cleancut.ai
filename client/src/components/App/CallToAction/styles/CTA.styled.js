@@ -50,7 +50,6 @@ const StyledContainer = styled.div`
 `;
 
 const StyledCTAContainer = styled(StyledContainer)`
-padding: 4rem;
 height: 50%;
 justify-content: space-around;
 `

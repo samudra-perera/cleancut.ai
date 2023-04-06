@@ -15,16 +15,18 @@ const MemberContainer = styled(StyledContainer)`
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin: 0 4rem;
 `;
 
 const TeamHeader = styled(StyledHeading)`
-  text-transform: uppercase;
-  color: #03004e;
+  font-size: 3.5rem;
+  font-family: Graphik-500;
+  padding-bottom: 2rem;
 `;
 
 const TeamParagraph = styled(StyledParagraph)`
   font-family: Graphik-400;
-  width: 25%;
+  width: 40%;
 `;
 
 export { TeamContainer, TeamHeader, TeamParagraph, MemberContainer };

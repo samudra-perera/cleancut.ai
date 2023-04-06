@@ -24,11 +24,12 @@ const TeamCTA = () => {
         <TeamCTASpan>Our Mission</TeamCTASpan>
         <TeamCTATextContainer>
           <TeamCTAHeading>
-            Change the way stories are told forever.
+            Revolutionize the future of Storytelling.
           </TeamCTAHeading>
           <TeamCTAParagraph>
-            At cleancut we are building AI tools to help film makers and content
-            creators focus on crafting the perfect story.
+            Our mission is to empower storytellers with AI-driven video editing
+            tools that enhance the creative process and bring their narratives
+            to life.
           </TeamCTAParagraph>
         </TeamCTATextContainer>
         <TeamCTAImage src="https://source.unsplash.com/random/blackAndWhite" />

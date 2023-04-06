@@ -2,7 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import HeaderTag from "../../SharedComponents/HeaderTag";
 import { Members } from "./Members";
-import { TeamContainer, TeamHeader, TeamParagraph, MemberContainer } from "./style/Team.style";
+import {
+  TeamContainer,
+  TeamHeader,
+  TeamParagraph,
+  MemberContainer,
+} from "./style/Team.style";
 import MemberCard from "./MemberCard";
 
 const TeamMembersContainer = styled.div`
@@ -17,8 +22,9 @@ const TeamMembers = () => {
         <HeaderTag text={"About Us"} />
         <TeamHeader>Meet the Team</TeamHeader>
         <TeamParagraph>
-          Our team has previously worked at some of the largest engineering
-          companies in the world .... (Amazon, Asana, etc)
+          Our team have previously worked on some of the largest AI projects at
+          Google, Microsoft and Amazon. We're backed by some of the world's top
+          investors including Index Ventures and Y Combinator.
         </TeamParagraph>
       </TeamContainer>
       <MemberContainer>
