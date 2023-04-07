@@ -13,6 +13,7 @@ import MemberCard from "./MemberCard";
 const TeamMembersContainer = styled.div`
   width: 100vw;
   background-color: white;
+  padding-bottom: 3rem;
 `;
 
 const TeamMembers = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.a`
-  background-color: #721ED8;
+  background-color: ${ props => props.colour || '#721ED8'};
   font-size: .8rem;
   padding: ${props => props.padding || '.6rem 2rem'};
   color: white;
@@ -22,11 +22,11 @@ const Button = (props) => {
     //To prop will render the link, has to include http
     //The type prop will determine the action
     //The width prop is for custom widths
-  const { text, to, type, width, padding } = props;
+  const { text, to, type, width, padding, colour } = props;
 
   return (
     <>
-      <StyledButton href={to ? to : '#'} type={type ? type : null} width={width} padding={padding}>{text}</StyledButton>
+      <StyledButton href={to ? to : '#'} type={type ? type : null} width={width} padding={padding} colour={colour}>{text}</StyledButton>
     </>
   );
 };
