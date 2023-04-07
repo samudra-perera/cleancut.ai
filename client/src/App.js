@@ -5,6 +5,7 @@ import Footer from "./components/SharedComponents/Footer/Footer";
 import NavBar from './components/SharedComponents/nav/NavBar'
 import WorkFlow from "./components/App/WorkFlow/WorkFlow";
 import '../src/index.css'
+import HomeFooter from "./components/SharedComponents/Footer/Home/HomeFooter";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <NavBar/>
       <CallToAction />
       <WorkFlow/>
-      <Footer/>
+      <Footer element={<HomeFooter/>}/>
     </>
   );
 }

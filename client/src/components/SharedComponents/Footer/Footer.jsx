@@ -7,9 +7,10 @@ import {
   FooterText,
   FooterLogo
 } from "./styles/Footer.styles";
-import { jobs } from "./JobOpenings";
+import { jobs } from "./Home/JobOpenings";
 
-const Footer = () => {
+const Footer = (props) => {
+  const {element} = props;
   return (
     <FooterContainer>
       <FooterContentContainer left={true}>
@@ -17,18 +18,7 @@ const Footer = () => {
         <FooterText>© 2023 CleanCut Inc. All rights reserved</FooterText>
       </FooterContentContainer>
       <FooterContentContainer>
-        <FooterHeading>Join our team</FooterHeading>
-        <FooterText size={"2"}>
-          We're looking for creative engineers, designers, and filmmakers who
-          want to change the way video is made, together.
-        </FooterText>
-        {jobs.map((job, index) => {
-          return (
-            <FooterLink href={job.url} key={index}>
-              {job.title}
-            </FooterLink>
-          );
-        })}
+        {element}
       </FooterContentContainer>
     </FooterContainer>
   );

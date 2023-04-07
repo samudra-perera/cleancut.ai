@@ -25,7 +25,7 @@ export const Members = [
   },
   {
     name: "Matthew",
-    title: "AI/ML Director & Engineer",
+    title: "AI/ML Director",
     accomplishments: [
       "PhD in Computing @ Queen's University",
       "Specialized in Computer Vision",
@@ -47,7 +47,7 @@ export const Members = [
   },
   {
     name: "Ashish",
-    title: "AI/ML Computer Vision Engineer",
+    title: "Computer Vision Engineer",
     accomplishments: [
       "Masters in AI/ML @ University of Ottawa",
       "4 years of Experience in AI & Computer Vision",
@@ -58,7 +58,7 @@ export const Members = [
   },
   {
     name: "Arun",
-    title: "Cloud Infra Engineer",
+    title: "Cloud Infrastructure Engineer",
     accomplishments: [
       "Computer Science @ Carleton University",
       "Previously @ Amazon",

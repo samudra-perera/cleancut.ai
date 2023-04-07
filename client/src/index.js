@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
-import Team from "./pages/Team";
+import Team from "./pages/About";
 import Error from "./pages/Error";
 
 //front end routing for Cleancut, this will handle all the page renders and Navigation links
