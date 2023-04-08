@@ -1,5 +1,5 @@
 import React from "react";
-import { CardContainer } from "./WorkTogether.style.js/ApplyCard.style";
+import { CardContainer, CardText } from "./WorkTogether.style.js/ApplyCard.style";
 import { LogoImage } from "../../SharedComponents/nav/styles/Nav.styled";
 import Button from "../../SharedComponents/Button";
 

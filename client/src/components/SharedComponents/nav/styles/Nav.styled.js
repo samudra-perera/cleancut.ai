@@ -22,6 +22,7 @@ const Nav = styled.nav`
 
   @media ${media.tablet} {
     padding: 0.5rem 0rem 1rem 0rem;
+    border-radius: .8rem;
   }
 `;
 
@@ -32,7 +33,7 @@ const Hamburger = styled.div`
   color: black;
 
   span {
-    border: 2px solid #4A01A4;
+    border: 1px solid #000000;
     width: 25px;
     margin-bottom: 4px;
     border-radius: 5px;

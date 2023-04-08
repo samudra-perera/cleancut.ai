@@ -38,7 +38,7 @@ const NavBar = () => {
           <Hamburger onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
               <>
-                <CgClose size={'35px'} color={'#4A01A4'}/>
+                <CgClose size={'32px'} color={'#000000'}/>
               </>
             ) : (
               <>

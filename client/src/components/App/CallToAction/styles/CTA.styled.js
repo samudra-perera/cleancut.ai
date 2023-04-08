@@ -3,28 +3,17 @@ import { media } from "../../../../style/media";
 
 const StyledImage = styled.img`
   flex-grow: 5;
-  max-height: 800px;
-  max-width: 800px;
+  max-height: 750px;
+  max-width: 750px;
   @media ${media.laptopLarge} {
     height: auto;
-    width: 65%;
-    margin: 3rem 0;
-  }
-
-  @media ${media.laptop} {
-    height: auto;
     width: 50%;
+    margin: 3rem 0;
   }
 
   @media ${media.tablet} {
     margin-bottom: 0;
-    height: 50%;
-    width: auto;
-  }
-
-  @media ${media.mobile} {
-    height: 30%;
-    width: auto;
+    width: 60%;
   }
 `;
 
@@ -50,24 +39,62 @@ const StyledContainer = styled.div`
 `;
 
 const StyledCTAContainer = styled(StyledContainer)`
-height: 50%;
-justify-content: space-around;
+height: 60%;
+
+@media ${media.laptopLarge} {
+  margin: 3rem 0rem 3rem 4rem;
+}
+
+@media ${media.tablet} {
+  margin: 3rem;
+  margin-top: 1.5rem;
+  align-items: baseline;
+}
+
 `
 
 const StyledHeading = styled.h1`
   font-family: Graphik-700;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   margin: 0rem 0;
   color: #121212;
+  line-height: 5.5rem;
 
   @media ${media.laptopLarge} {
-    font-size: 3.2rem;
+    font-size: 4rem;
+    width: 100%;
+    line-height: 4.5rem;
+  }
+
+  @media ${media.laptop} {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  @media ${media.tablet} {
+    font-size: 3rem;
+    line-height: 3.5rem;
   }
 
   @media ${media.mobile} {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 `;
+
+const CTAHeading = styled(StyledHeading)`
+  padding-bottom: 3rem;
+
+  @media ${media.laptopLarge} {
+    padding-bottom: 2rem;
+  }
+
+  @media ${media.tablet} {
+    padding-bottom: 1rem;
+  }
+
+`
+
 
 const StyledParagraph = styled.p`
   font-family: Graphik-300;
@@ -79,11 +106,34 @@ const StyledParagraph = styled.p`
     font-size: 0.9rem;
   }
 
+  
   @media ${media.tablet} {
-    text-align: center;
     margin: 0.5rem;
   }
 `;
+
+const CTAParagraph = styled(StyledParagraph)`
+padding-bottom: 4rem;
+
+@media ${media.laptopLarge} {
+  padding-bottom: 2rem;
+  font-size: 1rem;
+}
+
+@media ${media.laptop} {
+  margin: 0;
+}
+
+@media ${media.tablet} {
+  padding-bottom: 1rem;
+}
+
+@media ${media.mobile} {
+  padding-bottom: .5rem;
+  width: 70%;
+}
+
+`
 
 const StyledLink = styled.a`
   font-weight: bold;
@@ -151,6 +201,8 @@ export {
   StyledCTAContainer,
   StyledContainer,
   StyledHeading,
+  CTAHeading,
+  CTAParagraph,
   StyledParagraph,
   StyledLink,
   StyledButton,

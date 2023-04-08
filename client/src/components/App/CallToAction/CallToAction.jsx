@@ -8,8 +8,9 @@ import { media } from "../../../style/media";
 import {
   CTAButton,
   StyledCTAContainer,
-  StyledHeading,
+  CTAHeading,
   StyledImage,
+  CTAParagraph,
   // StyledLink,
   StyledParagraph,
   // StyledButton,
@@ -22,7 +23,7 @@ import EmailForm from "../../SharedComponents/EmailForm";
 
 //CTA Containter Div
 const CTA = styled.div`
-  height: 100vh;
+  height: fit-content;
   background-color: #e7e6fd;
   display: flex;
   flex-direction: row;
@@ -44,14 +45,14 @@ const CallToAction = () => {
     <>
       <CTA>
         <StyledCTAContainer>
-          <StyledHeading>
+          <CTAHeading>
             Less Editing.
             <br /> More Story.{" "}
-          </StyledHeading>
-          <StyledParagraph>
+          </CTAHeading>
+          <CTAParagraph>
             Let Spingle (our AI) watch your footage and separate the good from
             the shaky.
-          </StyledParagraph>
+          </CTAParagraph>
           <CTAButton>Start Free Trial</CTAButton>
           <EmailForm />
         </StyledCTAContainer>
