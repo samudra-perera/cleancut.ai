@@ -54,7 +54,7 @@ const CallToAction = () => {
             the shaky.
           </CTAParagraph>
           <CTAButton>Start Free Trial</CTAButton>
-          <EmailForm />
+          <EmailForm responsive={'none'}/>
         </StyledCTAContainer>
         <StyledImage
           src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1678816665/spinle_CTA_k0bomc.png"

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
+import { media } from "../../style/media";
 
 const EmailInput = styled.input`
   width: 250px;
@@ -19,15 +20,21 @@ const EmailInput = styled.input`
 const FooterForm = styled.form`
   display: flex;
   flex-direction: row;
-  border: 0.5px solid #721ED8;
+  border: 0.5px solid;
+  border-color: ${props => props.colour || '#721ED8'};
   width: fit-content;
   padding: 0.12rem;
   border-radius: 2rem;
   background-color: white;
+  
+  @media ${media.tablet} {
+    display: ${props => props.responsive || 'flex'};
+  }
+
 `;
 
 const StyledButton = styled.button`
-  background-color: #721ED8;
+  background-color: ${props => props.colour || '#721ED8'};
   font-size: 0.8rem;
   padding: .7rem 2rem;
   color: white;
@@ -38,9 +45,34 @@ const StyledButton = styled.button`
   border: none;
 `;
 
-const EmailForm = () => {
+const EmailForm = (props) => {
+  const {colour, responsive} = props
   return (
     <>
+
+      <FooterForm
+        action=""
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate"
+        target="_self"
+        colour={colour}
+        responsive={responsive}
+      >
+        <EmailInput type="email" placeholder="Enter your email"></EmailInput>
+        <StyledButton colour={colour}>Start Free Trial</StyledButton>
+      </FooterForm>
+    </>
+  );
+};
+
+export default EmailForm;
+
+
+
+
+
       {/* <div id="mc_embed_signup">
         <form
           action="https://gmail.us21.list-manage.com/subscribe/post?u=fefb32f5716c1b7250dc422db&amp;id=c7cbc559cf&amp;f_id=0045a6e1f0"
@@ -59,22 +91,7 @@ const EmailForm = () => {
         </form>
       </div> */}
 
-      <FooterForm
-        action=""
-        method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        class="validate"
-        target="_self"
-      >
-        <EmailInput type="email" placeholder="Enter your email"></EmailInput>
-        <StyledButton>Start Free Trial</StyledButton>
-      </FooterForm>
-    </>
-  );
-};
-
-// const EmailForm = () => (
+      // const EmailForm = () => (
 //   <MailchimpSubscribe
 //     url={"https://gmail.us21.list-manage.com/subscribe/post?u=fefb32f5716c1b7250dc422db&amp;id=c7cbc559cf&amp;f_id=0045a6e1f0"}
 //     render={({ subscribe, status, message }) => (
@@ -88,4 +105,3 @@ const EmailForm = () => {
 //   />
 // )
 
-export default EmailForm;
