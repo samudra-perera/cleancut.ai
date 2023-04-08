@@ -19,7 +19,18 @@ const WorkFlowContainer = styled.div`
 const WorkFlowHeaderContainer = styled(StyledContainer)`
   height: fit-content;
   margin-top: 0;
-  padding-bottom: 10rem;
+  padding-bottom: 8rem;
+
+  @media ${media.tablet} {
+    padding-bottom: 4rem;
+    align-items: baseline;
+    margin: 1rem 3rem 2rem;
+  }
+
+  @media ${media.mobile} {
+    margin: 1.5rem;
+  }
+
 `;
 
 const WorkFlowHeading = styled(StyledHeading)`
@@ -29,11 +40,15 @@ const WorkFlowHeading = styled(StyledHeading)`
   line-height: 1.3;
   margin: 0;
 
+  @media ${media.laptop} {
+    font-size: 2.5rem;
+  }
+
   @media ${media.tablet} {
     width: 100%;
     font-size: 2rem;
-    text-align: center;
   }
+
 `;
 
 export { WorkFlowContainer, WorkFlowHeaderContainer, WorkFlowHeading };

@@ -6,7 +6,6 @@ const HeaderTagContainer = styled.div`
   margin-top: 4rem;
   display: flex;
   flex-direction: row;
-  align-items: center;
 
   @media ${media.tablet} {
     margin-top: 3rem;
@@ -24,7 +23,13 @@ const HeaderText = styled.h5`
   margin: 0;
 
   @media ${media.tablet} {
-    margin: 1rem 0;
+    margin: .5rem 0;
+  }
+
+  @media ${media.mobile} {
+    font-family: Graphik-600;
+    font-size: .8rem;
+    margin: 0;
   }
 `;
 

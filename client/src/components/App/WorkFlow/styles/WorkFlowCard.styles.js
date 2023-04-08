@@ -12,13 +12,9 @@ const CardContainer = styled.div`
     padding-bottom: 12rem;
   }
 
-  @media ${media.laptop} {
-    padding-bottom: 8rem;
-  }
-
   @media ${media.tablet} {
-    flex-direction: column;
-    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    padding-bottom: 4rem;
   }
 `;
 
@@ -31,15 +27,6 @@ const GifContainer = styled.div`
   justify-content: center;
   height: fit-content;
   z-index: 2;
-
-  @media ${media.tablet} {
-    border-radius: 2rem;
-  }
-
-  @media ${media.mobile} {
-    border-radius: 1rem;
-  }
-
 `;
 
 const TextContainer = styled.div`
@@ -56,8 +43,7 @@ const TextContainer = styled.div`
   }
 
   @media ${media.tablet} {
-    margin: 2rem;
-    align-items: center;
+    margin: 5rem 2rem 4rem;
     width: 100%;
   }
 `;
@@ -73,7 +59,6 @@ const TextHeading = styled(StyledHeading)`
   }
 
   @media ${media.tablet} {
-    text-align: center;
     margin-bottom: 0;
   }
 `;
@@ -90,9 +75,15 @@ const TextParagraph = styled(StyledParagraph)`
   font-family: Graphik-400;
 
   @media ${media.tablet} {
-    text-align: center;
     margin: 1rem 0;
+    width: 50%;
+    line-height: 1.5rem;
   }
+
+  @media ${media.mobile} {
+    width: 70%;
+  }
+
 `;
 
 

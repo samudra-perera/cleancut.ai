@@ -16,6 +16,10 @@ const MediaContainer = styled.div`
   flex-grow: 1;
   position: relative;
   display: flex;
+
+  @media ${media.tablet} {
+    flex-grow: 0;
+  }
 `;
 const SecondaryBackgroundLeft = styled.div`
   position: absolute;
@@ -35,7 +39,13 @@ const SecondaryBackgroundLeft = styled.div`
   }
 
   @media ${media.tablet} {
-    display: none;
+    height: 410px;
+    width: 410px;
+  }
+
+  @media ${media.mobile} {
+    height: 290px;
+    width: 290px;
   }
 `;
 
@@ -57,7 +67,13 @@ const SecondaryBackgroundRight = styled.div`
   }
 
   @media ${media.tablet} {
-    display: none;
+    height: 410px;
+    width: 410px;
+  }
+
+  @media ${media.mobile} {
+    height: 290px;
+    width: 290px;
   }
 `;
 
