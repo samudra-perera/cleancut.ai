@@ -38,13 +38,14 @@ const WorkTogetherText = styled(StyledParagraph)`
 
 const WorkTogetherImageContainer = styled.div`
   margin: 3rem 6rem 3rem 0;
+  display: flex;
 `;
 
 const SpingleImage = styled.img`
-    position: relative;
   width: 400px;
   height: auto;
   top: 50px;
+  position: relative;
 `;
 
 export {
