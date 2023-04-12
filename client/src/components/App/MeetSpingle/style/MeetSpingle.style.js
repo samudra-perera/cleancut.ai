@@ -31,6 +31,7 @@ const SpingleImage = styled.img`
   @media ${media.tablet} {
     margin: 0;
     padding: 3rem 0;
+    max-width: 325px
   }
 
 
