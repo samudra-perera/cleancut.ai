@@ -140,6 +140,7 @@ const StyledLink = styled.a`
   color: #03004e;
   cursor: pointer;
   text-decoration: underline;
+
 `;
 
 //Button Styling
@@ -174,7 +175,7 @@ const ButtonText = styled.p`
 `;
 
 const CTAButton = styled.a`
-  background-color: #721ED8;
+  background-color: ${props => props.colour ||'#721ED8'};
   font-size: 0.8rem;
   padding: 0.6rem 2rem;
   color: white;

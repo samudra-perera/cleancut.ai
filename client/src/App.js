@@ -6,6 +6,7 @@ import NavBar from './components/SharedComponents/nav/NavBar'
 import WorkFlow from "./components/App/WorkFlow/WorkFlow";
 import '../src/index.css'
 import HomeFooter from "./components/SharedComponents/Footer/Home/HomeFooter";
+import MeetSpingle from "./components/App/MeetSpingle/MeetSpingle";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <NavBar/>
       <CallToAction />
       <WorkFlow/>
+      <MeetSpingle/>
       <Footer element={<HomeFooter/>}/>
     </>
   );

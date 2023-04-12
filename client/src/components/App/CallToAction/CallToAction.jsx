@@ -68,14 +68,6 @@ const CallToAction = () => {
 export default CallToAction;
 
 {
-  /* <StyledParagraph>
-            Get access to the beta through our{" "}
-            <StyledLink href="https://www.google.com">
-              Early Adopter Program
-            </StyledLink>
-          </StyledParagraph> */
-}
-{
   /* <StyledButton onClick={() => setToggle(!toggle)}>
             <PlayButton>
               <AiFillPlayCircle size="45px" />
