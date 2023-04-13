@@ -19,10 +19,12 @@ const Nav = styled.nav`
   flex-wrap: wrap;
   z-index: 5;
   margin: 0rem 1rem 0rem 1rem;
+  filter: drop-shadow(0 0 0.15rem grey);
 
   @media ${media.tablet} {
     padding: 0.5rem 0rem 1rem 0rem;
     border-radius: .8rem;
+    filter: drop-shadow(0 0 0.15rem lightgrey);;
   }
 `;
 
