@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-import { MailForm, EmailInput, StyledButton } from "./style/EmailForm.style";
-import DOMPurify from "dompurify";
+import {
+  MailForm,
+  EmailInput,
+  StyledButton,
+  ResponseMessage,
+} from "./style/EmailForm.style";
 
 const EmailForm = ({ colour, responsive, status, message, onValidated }) => {
   const [error, setError] = useState(null);
@@ -32,25 +36,16 @@ const EmailForm = ({ colour, responsive, status, message, onValidated }) => {
     }
   };
 
-  const sanitize = (content) => {
-    return process.browser ? DOMPurify.sanitize(content) : content;
-  };
-
-  // Extract Message from the string
+  // Extract Message from the string and clean the status code
   const getMessage = (message) => {
     if (!message) {
       return null;
     }
-    const result = message?.split("-") ?? null;
-    if ("0" !== result?.[0]?.trim()) {
-      return sanitize(message);
-    }
-    const formattedMessage = result?.[1]?.trim() ?? null;
-    return formattedMessage ? sanitize(formattedMessage) : null;
+
+    return message.slice(3);
   };
 
-  // const replyMessage = getMessage(message)
-  console.log(message);
+  const replyMessage = getMessage(message);
 
   return (
     <>
@@ -65,6 +60,13 @@ const EmailForm = ({ colour, responsive, status, message, onValidated }) => {
           Start Free Trial
         </StyledButton>
       </MailForm>
+      {status === "success" ? (
+        <ResponseMessage>{replyMessage}</ResponseMessage>
+      ) : null}
+      {status === "error" && error == null ? (
+        <ResponseMessage>{getMessage(message)}</ResponseMessage>
+      ) : null}
+      {error !== null ? <ResponseMessage>{error}</ResponseMessage> : null}
     </>
   );
 };

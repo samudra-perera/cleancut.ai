@@ -9,6 +9,7 @@ import {
 import EmailForm from "../../SharedComponents/EmailForm/EmailForm";
 import { StyledLink } from "../CallToAction/styles/CTA.styled";
 import { CTAButton } from "../CallToAction/styles/CTA.styled";
+import EmailFormSubscription from "../../SharedComponents/EmailForm/EmailFormSubscription";
 
 const MeetSpingle = () => {
   return (
@@ -26,7 +27,7 @@ const MeetSpingle = () => {
           </StyledLink>
         </MeetSpingleText>
         <CTAButton colour={'#F8705D'}>Start Free Trial</CTAButton>
-        <EmailForm colour={"#F8705D"} responsive={'none'}/>
+        <EmailFormSubscription responsive={'none'} colour={'#F8705D'}/>
       </MeetSpingleTextContainer>
     </MeetSpingleContainer>
   );

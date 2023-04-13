@@ -42,4 +42,9 @@ const StyledButton = styled.button`
   border: none;
 `;
 
-export {StyledButton, MailForm, EmailInput}
+const ResponseMessage = styled.p`
+  font-size: .7rem;
+  margin-top: .3rem;
+`
+
+export {StyledButton, MailForm, EmailInput, ResponseMessage}
