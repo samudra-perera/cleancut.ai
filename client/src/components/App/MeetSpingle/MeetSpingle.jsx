@@ -6,7 +6,7 @@ import {
   MeetSpingleText,
   MeetSpingleHeading,
 } from "./style/MeetSpingle.style";
-import EmailForm from "../../SharedComponents/EmailForm";
+import EmailForm from "../../SharedComponents/EmailForm/EmailForm";
 import { StyledLink } from "../CallToAction/styles/CTA.styled";
 import { CTAButton } from "../CallToAction/styles/CTA.styled";
 

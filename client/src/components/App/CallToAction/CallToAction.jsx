@@ -4,22 +4,14 @@
 import React from "react";
 import styled from "styled-components";
 import { media } from "../../../style/media";
-// import Button from "../../SharedComponents/Button";
 import {
   CTAButton,
   StyledCTAContainer,
   CTAHeading,
   StyledImage,
   CTAParagraph,
-  // StyledLink,
-  StyledParagraph,
-  // StyledButton,
-  // ButtonText,
-  // PlayButton,
-  // StyledIFrame
 } from "./styles/CTA.styled";
-// import { AiFillPlayCircle } from "react-icons/ai";
-import EmailForm from "../../SharedComponents/EmailForm";
+import EmailForm from "../../SharedComponents/EmailForm/EmailForm";
 
 //CTA Containter Div
 const CTA = styled.div`
@@ -54,7 +46,7 @@ const CallToAction = () => {
             the shaky.
           </CTAParagraph>
           <CTAButton>Start Free Trial</CTAButton>
-          <EmailForm responsive={'none'}/>
+          <EmailForm responsive={"none"} />
         </StyledCTAContainer>
         <StyledImage
           src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1678816665/spinle_CTA_k0bomc.png"
@@ -66,14 +58,3 @@ const CallToAction = () => {
 };
 
 export default CallToAction;
-
-{
-  /* <StyledButton onClick={() => setToggle(!toggle)}>
-            <PlayButton>
-              <AiFillPlayCircle size="45px" />
-            </PlayButton>
-            <PlayButton>
-              <ButtonText>Watch the Trailer</ButtonText>
-            </PlayButton>
-          </StyledButton> */
-}

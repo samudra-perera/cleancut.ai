@@ -1,7 +1,6 @@
 import React from "react";
 import { TestimonialInformation } from "./TestimonialInformation";
 import { TestimonialContainer, TestimonialHeader, TestimonialCardContainer } from "./style/Testimonials.style";
-import styled from "styled-components";
 import TestimonialCard from "./TestimonialCard";
 
 

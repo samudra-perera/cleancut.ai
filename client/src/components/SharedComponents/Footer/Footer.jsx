@@ -7,7 +7,7 @@ import {
 } from "./styles/Footer.styles";
 
 const Footer = (props) => {
-  //The element prop takes in the react component and renders it in the FooterContent Container
+  //The element prop takes in the react component and renders it with another FooterContentContainer
   const { element } = props;
   return (
     <FooterContainer>

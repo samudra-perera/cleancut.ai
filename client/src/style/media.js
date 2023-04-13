@@ -1,7 +1,5 @@
 //This file defines the breakpoints for the media queries
 //The purpose is to import the media queries as needed for each component and include the breakpoints
-import { css } from "styled-components";
-
 //Currently setup as a mobile first design, but should change to desktop first
 const sizes = {
   desktop: '2560px',
