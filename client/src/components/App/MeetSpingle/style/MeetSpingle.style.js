@@ -14,6 +14,10 @@ const MeetSpingleContainer = styled(StyledContainer)`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+
+  max-width: 1800px;
+  margin: 0 auto;
+
 `;
 
 const SpingleImage = styled.img`
@@ -36,6 +40,10 @@ const SpingleImage = styled.img`
 
 
 `;
+
+const ContainerContainer = styled.div`
+background-color: #bdbafa;
+`
 
 const MeetSpingleTextContainer = styled.div`
   padding: 4rem;
@@ -89,4 +97,5 @@ export {
   MeetSpingleTextContainer,
   MeetSpingleHeading,
   MeetSpingleText,
+  ContainerContainer
 };

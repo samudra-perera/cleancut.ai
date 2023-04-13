@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { media } from "../../../../style/media";
-import { StyledHeading, StyledParagraph } from "../../CallToAction/styles/CTA.styled";
+import {
+  StyledHeading,
+  StyledParagraph,
+} from "../../CallToAction/styles/CTA.styled";
 
 const CardContainer = styled.div`
   display: flex;
@@ -27,6 +30,10 @@ const GifContainer = styled.div`
   justify-content: center;
   height: fit-content;
   z-index: 2;
+
+  @media (min-width: 1800px) {
+    border-radius: 2rem;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -64,7 +71,7 @@ const TextHeading = styled(StyledHeading)`
 `;
 
 const TextSpan = styled.span`
-  color: #4A01A4;
+  color: #4a01a4;
   font-family: Graphik-500;
 `;
 
@@ -83,9 +90,7 @@ const TextParagraph = styled(StyledParagraph)`
   @media ${media.mobile} {
     width: 70%;
   }
-
 `;
-
 
 const CardIframe = styled.img`
   border: none;
@@ -109,7 +114,14 @@ const CardIframe = styled.img`
     height: 220px;
     padding: 1rem;
   }
-
 `;
 
-export {CardIframe, TextParagraph, TextSpan, TextHeading, TextContainer, GifContainer, CardContainer}
+export {
+  CardIframe,
+  TextParagraph,
+  TextSpan,
+  TextHeading,
+  TextContainer,
+  GifContainer,
+  CardContainer,
+};

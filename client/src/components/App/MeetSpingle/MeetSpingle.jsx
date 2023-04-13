@@ -5,14 +5,16 @@ import {
   MeetSpingleTextContainer,
   MeetSpingleText,
   MeetSpingleHeading,
+  ContainerContainer
 } from "./style/MeetSpingle.style";
-import EmailForm from "../../SharedComponents/EmailForm/EmailForm";
 import { StyledLink } from "../CallToAction/styles/CTA.styled";
 import { CTAButton } from "../CallToAction/styles/CTA.styled";
 import EmailFormSubscription from "../../SharedComponents/EmailForm/EmailFormSubscription";
 
 const MeetSpingle = () => {
   return (
+    <ContainerContainer>
+
     <MeetSpingleContainer>
       <SpingleImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1680936750/CleancutAssets/Spingle_Computer_a92gzn.png" />
       <MeetSpingleTextContainer>
@@ -30,6 +32,7 @@ const MeetSpingle = () => {
         <EmailFormSubscription responsive={'none'} colour={'#F8705D'}/>
       </MeetSpingleTextContainer>
     </MeetSpingleContainer>
+    </ContainerContainer>
   );
 };
 

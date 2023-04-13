@@ -12,6 +12,10 @@ const EmailInput = styled.input`
   :focus {
     outline: none;
   }
+
+  @media ${media.laptop} {
+    width: 210px;
+  }
 `;
 
 const MailForm = styled.div`

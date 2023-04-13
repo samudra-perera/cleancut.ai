@@ -5,7 +5,7 @@ import {
   StyledHeading,
 } from "../../CallToAction/styles/CTA.styled";
 
-const WorkFlowContainer = styled.div`
+const ContainerContainer = styled.div`
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 1) 0%,
@@ -13,7 +13,12 @@ const WorkFlowContainer = styled.div`
     rgba(189, 186, 255, 1) 70%,
     rgba(241, 241, 255, 1) 100%
   );
+`
 
+const WorkFlowContainer = styled.div`
+
+  max-width: 1800px;
+  margin: 0 auto;
   height: fit-content;
 `;
 const WorkFlowHeaderContainer = styled(StyledContainer)`
@@ -30,7 +35,6 @@ const WorkFlowHeaderContainer = styled(StyledContainer)`
   @media ${media.mobile} {
     margin: 1.5rem;
   }
-
 `;
 
 const WorkFlowHeading = styled(StyledHeading)`
@@ -48,7 +52,6 @@ const WorkFlowHeading = styled(StyledHeading)`
     width: 100%;
     font-size: 2rem;
   }
-
 `;
 
-export { WorkFlowContainer, WorkFlowHeaderContainer, WorkFlowHeading };
+export { WorkFlowContainer, WorkFlowHeaderContainer, WorkFlowHeading, ContainerContainer };

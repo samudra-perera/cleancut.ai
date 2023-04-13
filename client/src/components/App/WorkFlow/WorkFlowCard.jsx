@@ -30,6 +30,11 @@ const SecondaryBackgroundLeft = styled.div`
   left: 0;
   top: -7%;
 
+  @media (min-width: 1800px) {
+    left: -100px;
+    border-radius: 2rem;
+  }
+
   @media ${media.laptopLarge} {
     height: 570px;
   }
@@ -57,6 +62,11 @@ const SecondaryBackgroundRight = styled.div`
   background-color: #f8705c;
   right: 0;
   top: -7%;
+
+  @media (min-width: 1800px) {
+    right: -100px;
+    border-radius: 2rem;
+  }
 
   @media ${media.laptopLarge} {
     height: 570px;

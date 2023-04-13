@@ -22,6 +22,8 @@ const CTA = styled.div`
   color: #03004e;
   overflow: hidden;
   align-items: center;
+  max-width: 1800px;
+  margin: 0 auto;
 
   @media ${media.tablet} {
     flex-direction: column-reverse;
