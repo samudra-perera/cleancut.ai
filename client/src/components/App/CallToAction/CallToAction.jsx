@@ -11,7 +11,7 @@ import {
   StyledImage,
   CTAParagraph,
 } from "./styles/CTA.styled";
-import EmailForm from "../../SharedComponents/EmailForm/EmailForm";
+import EmailFormSubscription from "../../SharedComponents/EmailForm/EmailFormSubscription";
 
 //CTA Containter Div
 const CTA = styled.div`
@@ -46,7 +46,7 @@ const CallToAction = () => {
             the shaky.
           </CTAParagraph>
           <CTAButton>Start Free Trial</CTAButton>
-          <EmailForm responsive={"none"} />
+          <EmailFormSubscription responsive={'none'}/>
         </StyledCTAContainer>
         <StyledImage
           src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1678816665/spinle_CTA_k0bomc.png"

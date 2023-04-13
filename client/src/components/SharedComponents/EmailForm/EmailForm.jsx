@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MailForm, EmailInput, StyledButton } from "./style/EmailForm.style";
-import DOMPurify from 'dompurify';
+import DOMPurify from "dompurify";
 
 const EmailForm = ({ colour, responsive, status, message, onValidated }) => {
   const [error, setError] = useState(null);
@@ -21,21 +21,20 @@ const EmailForm = ({ colour, responsive, status, message, onValidated }) => {
   };
 
   //Handle the Input Key Event
-  const handleInputKeyEvent = (event) => {
+  const handleInputKeyEvent = (e) => {
     setError(null);
     // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
+    if (e.keyCode === 13) {
       // Cancel the default action, if needed
-      event.preventDefault();
+      e.preventDefault();
       // Trigger the button element with a click
       handleSubmission();
     }
   };
 
-  const sanitize = ( content ) => {
-    return process.browser ? DOMPurify.sanitize( content ) : content;
+  const sanitize = (content) => {
+    return process.browser ? DOMPurify.sanitize(content) : content;
   };
-  
 
   // Extract Message from the string
   const getMessage = (message) => {
@@ -50,20 +49,21 @@ const EmailForm = ({ colour, responsive, status, message, onValidated }) => {
     return formattedMessage ? sanitize(formattedMessage) : null;
   };
 
+  // const replyMessage = getMessage(message)
+  console.log(message);
+
   return (
     <>
-      <MailForm
-        action=""
-        method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        class="validate"
-        target="_self"
-        colour={colour}
-        responsive={responsive}
-      >
-        <EmailInput type="email" placeholder="Enter your email"></EmailInput>
-        <StyledButton colour={colour}>Start Free Trial</StyledButton>
+      <MailForm colour={colour} responsive={responsive}>
+        <EmailInput
+          type="email"
+          placeholder="Enter your email"
+          onChange={(e) => setEmail(e.target.value ?? " ")}
+          onKeyUp={(e) => handleInputKeyEvent(e)}
+        ></EmailInput>
+        <StyledButton colour={colour} onClick={handleSubmission}>
+          Start Free Trial
+        </StyledButton>
       </MailForm>
     </>
   );

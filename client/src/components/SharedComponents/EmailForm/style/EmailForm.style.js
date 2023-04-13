@@ -14,7 +14,7 @@ const EmailInput = styled.input`
   }
 `;
 
-const MailForm = styled.form`
+const MailForm = styled.div`
   display: flex;
   flex-direction: row;
   border: 0.5px solid;
@@ -25,7 +25,7 @@ const MailForm = styled.form`
   background-color: white;
   
   @media ${media.tablet} {
-    display: ${props => props.responsive || 'flex'};
+    display: ${props => props.responsive || 'flex'}
   }
 
 `;
