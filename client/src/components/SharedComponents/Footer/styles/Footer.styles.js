@@ -39,7 +39,8 @@ const FooterContentContainer = styled.div`
 const FooterHeading = styled.h5`
   margin: 0;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-family: Graphik-500;
+  margin-bottom: .5rem;
 
   @media ${media.tablet} {
     font-size: 1rem;
@@ -51,7 +52,7 @@ const FooterText = styled.p.attrs((props) => ({
 }))`
   font-size: 1rem;
   font-weight: 300;
-  line-height: ${(props) => props.size};
+  margin-bottom: 2rem;
 
   @media ${media.tablet} {
     line-height: 1.5;

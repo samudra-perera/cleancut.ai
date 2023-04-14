@@ -61,12 +61,12 @@ const EmailForm = ({ colour, responsive, status, message, onValidated }) => {
         </StyledButton>
       </MailForm>
       {status === "success" ? (
-        <ResponseMessage>{replyMessage}</ResponseMessage>
+        <ResponseMessage responsive={responsive}>{replyMessage}</ResponseMessage>
       ) : null}
       {status === "error" && error == null ? (
-        <ResponseMessage>{getMessage(message)}</ResponseMessage>
+        <ResponseMessage responsive={responsive}>{getMessage(message)}</ResponseMessage>
       ) : null}
-      {error !== null ? <ResponseMessage>{error}</ResponseMessage> : null}
+      {error !== null ? <ResponseMessage responsive={responsive}>{error}</ResponseMessage> : null}
     </>
   );
 };

@@ -11,9 +11,9 @@ const HomeFooter = () => {
   return (
     <FooterContentContainer>
       <FooterHeading>Join our team</FooterHeading>
-      <FooterText size={"2"}>
-        We're looking for creative engineers, designers, and filmmakers who want
-        to change the way video is made, together.
+      <FooterText>
+        We're looking for AI/ML and computer vision engineers who want to make
+        an impact on storytelling, together.
       </FooterText>
       {jobs.map((job, index) => {
         return (

@@ -97,6 +97,7 @@ const WorkFlowCard = (props) => {
     explanation,
     borderRadius,
     gifLink,
+    marginBottom,
   } = props;
 
   return (
@@ -112,7 +113,7 @@ const WorkFlowCard = (props) => {
         </GifContainer>
       </MediaContainer>
       <TextContainer align={alignItems}>
-        <TextSpan>{step}</TextSpan>
+        <TextSpan marginBottom={marginBottom}>{step}</TextSpan>
         <TextHeading align={align}>{heading}</TextHeading>
         <TextParagraph align={align}>{explanation}</TextParagraph>
       </TextContainer>

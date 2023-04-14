@@ -73,12 +73,14 @@ const TextHeading = styled(StyledHeading)`
 const TextSpan = styled.span`
   color: #4a01a4;
   font-family: Graphik-500;
+  margin-bottom: ${props => props.marginBottom || 0};
 `;
 
 const TextParagraph = styled(StyledParagraph)`
   text-align: ${(props) => props.align || "justify"};
   margin: 1.5rem 0;
   width: 70%;
+  line-height: 1.7rem;
   font-family: Graphik-400;
 
   @media ${media.tablet} {

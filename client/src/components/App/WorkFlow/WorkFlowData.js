@@ -20,6 +20,7 @@ export const WorkFlowData = [
     align: "left",
     alignItems: "flex-start",
     borderRadius: "2rem 0 0 2rem",
+    marginBottom: '.8rem'
   },
   {
     step: "03",

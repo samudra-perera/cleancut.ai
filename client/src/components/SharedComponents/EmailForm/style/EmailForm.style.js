@@ -49,6 +49,11 @@ const StyledButton = styled.button`
 const ResponseMessage = styled.p`
   font-size: .7rem;
   margin-top: .3rem;
+
+  @media ${media.tablet} {
+    display: ${props => props.responsive || 'flex'}
+  }
+
 `
 
 export {StyledButton, MailForm, EmailInput, ResponseMessage}

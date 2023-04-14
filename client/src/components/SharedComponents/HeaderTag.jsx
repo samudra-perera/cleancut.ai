@@ -21,6 +21,8 @@ const HeaderText = styled.h5`
   font-family: Graphik-500;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: .5rem;
+
 
   @media ${media.tablet} {
     margin: .5rem 0;

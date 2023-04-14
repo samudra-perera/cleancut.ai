@@ -114,6 +114,7 @@ const StyledParagraph = styled.p`
 
 const CTAParagraph = styled(StyledParagraph)`
 padding-bottom: 4rem;
+font-style: Graphik-400;
 
 @media ${media.laptopLarge} {
   padding-bottom: 2rem;
