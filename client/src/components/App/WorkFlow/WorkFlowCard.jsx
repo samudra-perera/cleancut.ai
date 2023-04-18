@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import {
   CardIframe,
   TextParagraph,
@@ -8,98 +7,23 @@ import {
   TextContainer,
   GifContainer,
   CardContainer,
+  MediaContainer,
+  SecondaryBackgroundLeft,
+  SecondaryBackgroundRight,
 } from "./styles/WorkFlowCard.styles";
+import SoftwareSection from "./SoftwareSection";
 
-import { media } from "../../../style/media";
-
-const MediaContainer = styled.div`
-  flex-grow: 1;
-  position: relative;
-  display: flex;
-
-  @media ${media.tablet} {
-    flex-grow: 0;
-  }
-`;
-const SecondaryBackgroundLeft = styled.div`
-  position: absolute;
-  width: 95%;
-  height: 620px;
-  border-radius: ${(props) => props.borderRadius};
-  background-color: #f8705c;
-  left: 0;
-  top: -7%;
-
-  @media (min-width: 1800px) {
-    left: -100px;
-    border-radius: 2rem;
-  }
-
-  @media ${media.laptopLarge} {
-    height: 570px;
-  }
-
-  @media ${media.laptop} {
-    height: 450px;
-  }
-
-  @media ${media.tablet} {
-    height: 410px;
-    width: 410px;
-  }
-
-  @media ${media.mobile} {
-    height: 290px;
-    width: 290px;
-  }
-`;
-
-const SecondaryBackgroundRight = styled.div`
-  position: absolute;
-  width: 95%;
-  height: 620px;
-  border-radius: ${(props) => props.borderRadius};
-  background-color: #f8705c;
-  right: 0;
-  top: -7%;
-
-  @media (min-width: 1800px) {
-    right: -100px;
-    border-radius: 2rem;
-  }
-
-  @media ${media.laptopLarge} {
-    height: 570px;
-  }
-
-  @media ${media.laptop} {
-    height: 450px;
-  }
-
-  @media ${media.tablet} {
-    height: 410px;
-    width: 410px;
-  }
-
-  @media ${media.mobile} {
-    height: 290px;
-    width: 290px;
-  }
-`;
-
-const WorkFlowCard = (props) => {
-  const {
-    heading,
-    direction,
-    step,
-    align,
-    alignItems,
-    explanation,
-    borderRadius,
-    gifLink,
-    marginBottom,
-  } = props;
-
+const WorkFlowCard = ({
+  heading,
+  direction,
+  step,
+  align,
+  alignItems,
+  explanation,
+  borderRadius,
+  gifLink,
+  marginBottom,
+}) => {
   return (
     <CardContainer direction={direction}>
       <MediaContainer>
@@ -116,9 +40,7 @@ const WorkFlowCard = (props) => {
         <TextSpan marginBottom={marginBottom}>{step}</TextSpan>
         <TextHeading align={align}>{heading}</TextHeading>
         <TextParagraph align={align}>{explanation}</TextParagraph>
-        {
-          step === '01' ? <p>Yeah</p> : <></>
-        }
+        {step === "01" ? <SoftwareSection/> : <></>}
       </TextContainer>
     </CardContainer>
   );

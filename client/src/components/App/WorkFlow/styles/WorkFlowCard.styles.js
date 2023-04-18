@@ -118,6 +118,81 @@ const CardIframe = styled.img`
   }
 `;
 
+const MediaContainer = styled.div`
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+
+  @media ${media.tablet} {
+    flex-grow: 0;
+  }
+`;
+const SecondaryBackgroundLeft = styled.div`
+  position: absolute;
+  width: 95%;
+  height: 620px;
+  border-radius: ${(props) => props.borderRadius};
+  background-color: #f8705c;
+  left: 0;
+  top: -7%;
+
+  @media (min-width: 1800px) {
+    left: -100px;
+    border-radius: 2rem;
+  }
+
+  @media ${media.laptopLarge} {
+    height: 570px;
+  }
+
+  @media ${media.laptop} {
+    height: 450px;
+  }
+
+  @media ${media.tablet} {
+    height: 410px;
+    width: 410px;
+  }
+
+  @media ${media.mobile} {
+    height: 290px;
+    width: 290px;
+  }
+`;
+
+const SecondaryBackgroundRight = styled.div`
+  position: absolute;
+  width: 95%;
+  height: 620px;
+  border-radius: ${(props) => props.borderRadius};
+  background-color: #f8705c;
+  right: 0;
+  top: -7%;
+
+  @media (min-width: 1800px) {
+    right: -100px;
+    border-radius: 2rem;
+  }
+
+  @media ${media.laptopLarge} {
+    height: 570px;
+  }
+
+  @media ${media.laptop} {
+    height: 450px;
+  }
+
+  @media ${media.tablet} {
+    height: 410px;
+    width: 410px;
+  }
+
+  @media ${media.mobile} {
+    height: 290px;
+    width: 290px;
+  }
+`;
+
 export {
   CardIframe,
   TextParagraph,
@@ -126,4 +201,7 @@ export {
   TextContainer,
   GifContainer,
   CardContainer,
+  MediaContainer,
+  SecondaryBackgroundLeft,
+  SecondaryBackgroundRight
 };

@@ -18,7 +18,7 @@ const WorkFlow = () => {
         {/* <DraggableSlider /> */}
         <WorkFlowHeaderContainer>
           <HeaderTag text={"The Future of Video Editing is Now"} />
-          <WorkFlowHeading>Springle Elevates Your WorkFlow</WorkFlowHeading>
+          <WorkFlowHeading>Work At The Speed of Creativity</WorkFlowHeading>
         </WorkFlowHeaderContainer>
         {WorkFlowData.map((card, index) => {
           return (
