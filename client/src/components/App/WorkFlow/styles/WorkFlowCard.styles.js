@@ -119,7 +119,6 @@ const CardIframe = styled.img`
 `;
 
 const MediaContainer = styled.div`
-  flex-grow: 1;
   position: relative;
   display: flex;
 

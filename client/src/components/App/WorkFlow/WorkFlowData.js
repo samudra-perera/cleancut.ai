@@ -4,7 +4,7 @@ export const WorkFlowData = [
     heading: "Seamless Integration",
     explanation:
       "Works in your current Premiere Pro, Final Cut, and DaVinci Resolve workflow. Always ready when you are.",
-    gifLink: "https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif",
+    gifLink: "https://res.cloudinary.com/dkrjwbr8w/image/upload/v1681853804/CleancutAssets/step01_nd7glx.png",
     direction: "row",
     align: "right",
     alignItems: "flex-end",
@@ -14,8 +14,8 @@ export const WorkFlowData = [
     step: "02",
     heading: "Turn hours to minutes",
     explanation:
-      "Cleancut separates good footage from bad, so you don't have to. Get your edits out quickly.",
-    gifLink: "https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif",
+      "Cleancut separates good footage from bad right in the Adobe Premiere Pro timeline. Get your edits out quickly.",
+    gifLink: "https://res.cloudinary.com/dkrjwbr8w/image/upload/v1681853809/CleancutAssets/step02_j2woax.png",
     direction: "row-reverse",
     align: "left",
     alignItems: "flex-start",
@@ -26,8 +26,8 @@ export const WorkFlowData = [
     step: "03",
     heading: "2 Step Process",
     explanation:
-      "Seamless integration in your current Premiere Pro workflow. Always ready when you are.",
-    gifLink: "https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif",
+      "Cleancut analyzes every single frame to give you precision edits. No more second guessing.",
+    gifLink: "https://res.cloudinary.com/dkrjwbr8w/image/upload/v1681853814/CleancutAssets/step03_yqqeat.png",
     direction: "row",
     align: "right",
     alignItems: "flex-end",

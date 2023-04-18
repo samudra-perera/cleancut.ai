@@ -66,7 +66,7 @@ const Avatar = styled.img`
 const AvatarName = styled.span`
   font-family: Graphik-500-italic;
   font-size: 0.9rem;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.3rem;
 `;
 const AvatarSpan = styled.span`
   font-family: Graphik-300-italic;
