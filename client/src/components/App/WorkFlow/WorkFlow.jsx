@@ -9,11 +9,13 @@ import HeaderTag from "../../SharedComponents/HeaderTag";
 import { WorkFlowData } from "./WorkFlowData";
 import WorkFlowCard from "./WorkFlowCard";
 import Testimonials from "../Testimonials/Testimonials";
+import DraggableSlider from "../DraggableSlider/DraggableSlider";
 
 const WorkFlow = () => {
   return (
     <ContainerContainer>
       <WorkFlowContainer>
+        {/* <DraggableSlider /> */}
         <WorkFlowHeaderContainer>
           <HeaderTag text={"The Future of Video Editing is Now"} />
           <WorkFlowHeading>Springle Elevates Your WorkFlow</WorkFlowHeading>

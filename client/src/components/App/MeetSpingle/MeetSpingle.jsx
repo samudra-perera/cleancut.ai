@@ -16,7 +16,7 @@ const MeetSpingle = () => {
     <ContainerContainer>
 
     <MeetSpingleContainer>
-      <SpingleImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1680936750/CleancutAssets/Spingle_Computer_a92gzn.png" />
+      <SpingleImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1681838995/CleancutAssets/Spingle_Computer_cfymm7.png" />
       <MeetSpingleTextContainer>
         <MeetSpingleHeading>
           Meet Spingle, your Personal AI assistant
@@ -28,7 +28,7 @@ const MeetSpingle = () => {
             Early Adopter Program
           </StyledLink>
         </MeetSpingleText>
-        <CTAButton colour={'#F8705D'}>Start Free Trial</CTAButton>
+        <CTAButton colour={'#F8705D'} href="https://gaydjjpbnip.typeform.com/to/QZN78xC6" target='_blank'>Start Free Trial</CTAButton>
         <EmailFormSubscription responsive={'none'} colour={'#F8705D'}/>
       </MeetSpingleTextContainer>
     </MeetSpingleContainer>

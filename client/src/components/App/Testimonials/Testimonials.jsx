@@ -9,8 +9,7 @@ const Testimonials = () => {
   return (
     <TestimonialContainer>
       <TestimonialHeader>
-        Join others in using CleanCut today to blah blah blah it’s the best
-        thing to use and save your time
+      Join creatives embracing Cleancut for efficient editing and better storytelling.
       </TestimonialHeader>
       <TestimonialCardContainer>
         {TestimonialInformation.map((testimonial, index) => {

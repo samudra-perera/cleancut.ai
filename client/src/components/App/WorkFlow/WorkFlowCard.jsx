@@ -116,6 +116,9 @@ const WorkFlowCard = (props) => {
         <TextSpan marginBottom={marginBottom}>{step}</TextSpan>
         <TextHeading align={align}>{heading}</TextHeading>
         <TextParagraph align={align}>{explanation}</TextParagraph>
+        {
+          step === '01' ? <p>Yeah</p> : <></>
+        }
       </TextContainer>
     </CardContainer>
   );

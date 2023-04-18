@@ -1,9 +1,9 @@
 export const WorkFlowData = [
   {
     step: "01",
-    heading: "Scary Accurate",
+    heading: "Seamless Integration",
     explanation:
-      "Cleancut analyzes every single frame to give you precision edits. No more second guessing.",
+      "Works in your current Premiere Pro, Final Cut, and DaVinci Resolve workflow. Always ready when you are.",
     gifLink: "https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif",
     direction: "row",
     align: "right",

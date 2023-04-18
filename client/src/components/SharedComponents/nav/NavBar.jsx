@@ -78,7 +78,7 @@ const NavBar = () => {
                 </>
               );
             })}
-            <Button text={"Start Free Trial"} to="https://google.com" />
+            <Button text={"Start Free Trial"} to="https://gaydjjpbnip.typeform.com/to/QZN78xC6" />
           </Menu>
         </Nav>
         {/* Dropdown links is rendered based like this for now...if there are multiple dropdowns this will have to change */}

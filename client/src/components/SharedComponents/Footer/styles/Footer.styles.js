@@ -8,6 +8,9 @@ const FooterContainer = styled.div`
   flex-direction: row;
   padding: 1rem 0;
 
+  max-width: 1800px;
+  margin: 0 auto;
+
   @media ${media.mobile} {
     flex-direction: column-reverse;
     align-items: center;
@@ -87,6 +90,10 @@ const FooterLink = styled(StyledLink)`
 
 `;
 
+  const FooterContainerContainer = styled.div`
+    width: 100vw;
+    background: white;
+  `
 
 export {
   FooterContainer,
@@ -94,8 +101,10 @@ export {
   FooterHeading,
   FooterText,
   FooterLink,
-  FooterLogo
+  FooterLogo,
+  FooterContainerContainer
 };
+
 
 
 // Deprecated Styles - NOT USED

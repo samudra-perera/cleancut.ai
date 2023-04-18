@@ -8,7 +8,7 @@ export const TestimonialInformation = [
   },
   {
     name: "Bakshish Singh",
-    span: ['PML Founder', '966K Subscribers'],
+    span: ['PML Founder'],
     quote:
       '"Honestly, the worst part of editing any video is knowing what you want to use and don\'t want to use. It\'s the most time consuming task, Cleancut literally cuts that in a third."',
     avatarURL: "https://res.cloudinary.com/dkrjwbr8w/image/upload/v1680763726/CleancutAssets/Bakshi_sizr9j.png",

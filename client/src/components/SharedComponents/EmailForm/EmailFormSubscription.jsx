@@ -2,7 +2,7 @@ import React from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import EmailForm from "./EmailForm";
 
-const url = 'https://gmail.us21.list-manage.com/subscribe/post?u=fefb32f5716c1b7250dc422db&amp;id=c7cbc559cf&amp;f_id=0045a6e1f0'
+const url = 'https://cleancut.us1.list-manage.com/subscribe/post?u=c2f88fc14878154bd56e3c9e1&amp;id=b1fe8b47f5'
 
 const EmailFormSubscription = ({responsive, colour}) => {
   return (

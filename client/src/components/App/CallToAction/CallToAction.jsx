@@ -47,7 +47,7 @@ const CallToAction = () => {
             Let Spingle (our AI) watch your footage and separate the good from
             the shaky.
           </CTAParagraph>
-          <CTAButton>Start Free Trial</CTAButton>
+          <CTAButton href="https://gaydjjpbnip.typeform.com/to/QZN78xC6" target='_blank'>Start Free Trial</CTAButton>
           <EmailFormSubscription responsive={'none'}/>
         </StyledCTAContainer>
         <StyledImage
