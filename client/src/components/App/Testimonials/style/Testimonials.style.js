@@ -12,14 +12,24 @@ const TestimonialContainer = styled(StyledContainer)`
 `;
 
 const TestimonialHeader = styled.h3`
-  padding-top: 7rem;
-  font-family: Graphik-400;
+  padding-top: 4rem;
+  font-family: Graphik-500;
   font-size: 2.5rem;
   width: 90%;
   text-align: center;
 
   @media ${media.laptop} {
     font-size: 2rem;
+  }
+
+  @media ${media.tablet} {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+  }
+
+  @media ${media.mobile} {
+    font-size: 1rem;
+    padding-top: 1rem;
   }
 
 `;
@@ -41,19 +51,14 @@ const TestimonialCardContainer = styled.div`
 `;
 
 const TestimonialDivider = styled.div`
-
-`
-
-// const TestimonialDivider = styled.div`
-//   height: 3px;
-//   width: 90%;
-//   background-color: white;
-//   margin-top: 5rem;
-// `;
+  height: 2px;
+  width: 90%;
+  background-color: white;
+`;
 
 export {
   TestimonialCardContainer,
-//   TestimonialDivider,
+  TestimonialDivider,
   TestimonialHeader,
   TestimonialContainer,
 };

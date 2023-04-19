@@ -13,7 +13,7 @@ const HomeFooter = () => {
       <FooterHeading>Join our team</FooterHeading>
       <FooterText>
         We're looking for AI/ML and computer vision engineers who want to make
-        an impact on storytelling, together.
+        an impact on storytelling, together. Please send an email to <FooterLink href="mailto: admin@cleancut.ai">admin@cleancut.ai</FooterLink> if you are interested in joining our team.
       </FooterText>
       {jobs.map((job, index) => {
         return (

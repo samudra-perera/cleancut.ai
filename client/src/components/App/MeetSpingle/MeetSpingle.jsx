@@ -23,7 +23,7 @@ const MeetSpingle = () => {
           <MeetSpingleText>
             What took hours is now completed in minutes. <br />
             Get access to the beta through our{" "}
-            <StyledLink href="https://www.google.com">
+            <StyledLink href="https://gaydjjpbnip.typeform.com/to/QZN78xC6?typeform-source=localhost" target="_blank">
               Early Adopter Program
             </StyledLink>
           </MeetSpingleText>

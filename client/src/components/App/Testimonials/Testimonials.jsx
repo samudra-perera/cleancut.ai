@@ -1,6 +1,6 @@
 import React from "react";
 import { TestimonialInformation } from "./TestimonialInformation";
-import { TestimonialContainer, TestimonialHeader, TestimonialCardContainer } from "./style/Testimonials.style";
+import { TestimonialContainer, TestimonialHeader, TestimonialCardContainer, TestimonialDivider } from "./style/Testimonials.style";
 import TestimonialCard from "./TestimonialCard";
 
 
@@ -8,11 +8,11 @@ import TestimonialCard from "./TestimonialCard";
 const Testimonials = () => {
   return (
     <TestimonialContainer>
-      
+      <TestimonialDivider />
       <TestimonialHeader>
-      Join creatives embracing Cleancut for efficient editing and better storytelling.
+      Join Creatives Embracing Cleancut For Efficient Editing And Better Storytelling.
       </TestimonialHeader>
-      <TestimonialCardContainer>
+      {/* <TestimonialCardContainer>
         {TestimonialInformation.map((testimonial, index) => {
           return (
             <TestimonialCard
@@ -24,7 +24,7 @@ const Testimonials = () => {
             />
           );
         })}
-      </TestimonialCardContainer>
+      </TestimonialCardContainer> */}
     </TestimonialContainer>
   );
 };

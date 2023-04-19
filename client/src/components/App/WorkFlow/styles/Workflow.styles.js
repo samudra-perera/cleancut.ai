@@ -12,7 +12,7 @@ const ContainerContainer = styled.div`
     180deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(189, 186, 255, 1) 40%,
-    rgba(189, 186, 255, 1) 70%,
+    rgba(189, 186, 255, 1) 50%,
     rgba(241, 241, 255, 1) 100%
   );
 `

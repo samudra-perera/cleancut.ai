@@ -8,15 +8,17 @@ import {
 const CardContainer = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction || "row"};
-  padding-bottom: 15rem;
+  padding-bottom: 8rem;
   align-items: center;
+  min-height: 625px;
 
   @media ${media.laptopLarge} {
-    padding-bottom: 8rem;
+    padding-bottom: 5rem;
+    min-height: 450px;
   }
 
   @media ${media.laptop} {
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
   }
 
   @media ${media.tablet} {

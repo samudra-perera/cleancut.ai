@@ -33,7 +33,8 @@ const FooterContentContainer = styled.div`
   @media ${media.mobile} {
     border-right: none;
     width: 80%;
-    /* border-top: ${({ left }) => (left ? ".5px solid grey" : "none")}; */
+    border-top: ${({ left }) => (left ? ".5px solid grey" : "none")};
+    /* border-bottom: 1px solid lightgrey; */
     padding-bottom: 1.5rem;
   }
 
