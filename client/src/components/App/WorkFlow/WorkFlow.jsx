@@ -16,7 +16,7 @@ const WorkFlow = () => {
   return (
     <ContainerContainer>
       <WorkFlowContainer>
-        {/* <DraggableSlider /> */}
+        <DraggableSlider />
         <WorkFlowHeaderContainer>
           <HeaderTag text={"The Future of Video Editing is Now"} />
           <WorkFlowHeading>Work At The Speed of Creativity</WorkFlowHeading>
