@@ -26,7 +26,7 @@ export const WorkFlowData = [
     step: "03",
     heading: "2 Step Process",
     explanation:
-      "Cleancut analyzes every single frame to give you precision edits. No more second guessing.",
+      "Add your content and let Spingle do the rest. Spingle will choose the best parts. No more second guessing.",
     gifLink: "https://res.cloudinary.com/dkrjwbr8w/image/upload/v1681853814/CleancutAssets/step03_yqqeat.png",
     direction: "row",
     align: "right",

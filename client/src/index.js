@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import Team from "./pages/About";
+// import Team from "./pages/About";
 import Error from "./pages/Error";
 
 //front end routing for Cleancut, this will handle all the page renders and Navigation links
@@ -13,11 +13,11 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
   },
-  {
-    path: "/about",
-    element: <Team/>,
-    errorElement: <Error />,
-  },
+  // {
+  //   path: "/about",
+  //   element: <Team/>,
+  //   errorElement: <Error />,
+  // },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

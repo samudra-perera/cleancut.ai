@@ -44,7 +44,7 @@ export const MenuLinks = [
   // },
   {
     title: "about",
-    url: "/about",
+    url: "/",
   },
   // {
   //   title: "Sign in",

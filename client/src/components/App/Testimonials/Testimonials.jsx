@@ -8,6 +8,7 @@ import TestimonialCard from "./TestimonialCard";
 const Testimonials = () => {
   return (
     <TestimonialContainer>
+      
       <TestimonialHeader>
       Join creatives embracing Cleancut for efficient editing and better storytelling.
       </TestimonialHeader>

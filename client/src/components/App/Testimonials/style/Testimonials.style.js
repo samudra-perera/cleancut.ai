@@ -40,6 +40,10 @@ const TestimonialCardContainer = styled.div`
   }
 `;
 
+const TestimonialDivider = styled.div`
+
+`
+
 // const TestimonialDivider = styled.div`
 //   height: 3px;
 //   width: 90%;

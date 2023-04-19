@@ -91,7 +91,7 @@ const FooterLink = styled(StyledLink)`
 `;
 
   const FooterContainerContainer = styled.div`
-    width: 100vw;
+    width: 100%;
     background: white;
   `
 

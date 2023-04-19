@@ -12,7 +12,11 @@ const CardContainer = styled.div`
   align-items: center;
 
   @media ${media.laptopLarge} {
-    padding-bottom: 12rem;
+    padding-bottom: 8rem;
+  }
+
+  @media ${media.laptop} {
+    padding-bottom: 10rem;
   }
 
   @media ${media.tablet} {
@@ -41,16 +45,16 @@ const TextContainer = styled.div`
   flex-direction: column;
   width: 30%;
   align-items: ${(props) => props.align || "flex-start"};
-  margin: 7rem;
+  margin: 7rem 4rem;
   justify-content: center;
   flex-grow: 1;
 
   @media ${media.laptop} {
-    margin: 5rem;
+    margin: 2rem;
   }
 
   @media ${media.tablet} {
-    margin: 5rem 2rem 4rem;
+    margin: 5rem 2rem 2rem;
     width: 100%;
   }
 `;
@@ -89,6 +93,10 @@ const TextParagraph = styled(StyledParagraph)`
     line-height: 1.5rem;
   }
 
+  @media ${media.laptop} {
+    line-height: 1.5rem;
+  }
+
   @media ${media.mobile} {
     width: 70%;
   }
@@ -101,19 +109,19 @@ const CardIframe = styled.img`
   padding: 1.5rem;
 
   @media ${media.laptopLarge} {
-    height: 450px;
+    height: 375px;
   }
 
   @media ${media.laptop} {
-    height: 350px;
+    height: 300px;
   }
 
   @media ${media.tablet} {
-    height: 310px;
+    width: 90%;
   }
 
   @media ${media.mobile} {
-    height: 220px;
+    height: 200px;
     padding: 1rem;
   }
 `;
@@ -136,25 +144,25 @@ const SecondaryBackgroundLeft = styled.div`
   top: -7%;
 
   @media (min-width: 1800px) {
-    left: -100px;
+    left: -50px;
     border-radius: 2rem;
   }
 
   @media ${media.laptopLarge} {
-    height: 570px;
+    height: 480px;
   }
 
   @media ${media.laptop} {
-    height: 450px;
+    height: 400px;
   }
 
   @media ${media.tablet} {
-    height: 410px;
+    height: 385px;
     width: 410px;
   }
 
   @media ${media.mobile} {
-    height: 290px;
+    height: 265px;
     width: 290px;
   }
 `;
@@ -169,28 +177,30 @@ const SecondaryBackgroundRight = styled.div`
   top: -7%;
 
   @media (min-width: 1800px) {
-    right: -100px;
+    right: -50px;
     border-radius: 2rem;
   }
 
   @media ${media.laptopLarge} {
-    height: 570px;
+    height: 480px;
   }
 
   @media ${media.laptop} {
-    height: 450px;
+    height: 400px;
   }
 
   @media ${media.tablet} {
-    height: 410px;
+    height: 385px;
     width: 410px;
   }
 
   @media ${media.mobile} {
-    height: 290px;
+    height: 265px;
     width: 290px;
   }
 `;
+
+
 
 export {
   CardIframe,
@@ -202,5 +212,5 @@ export {
   CardContainer,
   MediaContainer,
   SecondaryBackgroundLeft,
-  SecondaryBackgroundRight
+  SecondaryBackgroundRight,
 };
