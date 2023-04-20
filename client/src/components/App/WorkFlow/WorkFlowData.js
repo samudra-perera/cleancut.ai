@@ -15,7 +15,7 @@ export const WorkFlowData = [
     heading: "Turn hours to minutes",
     explanation:
       "Cleancut separates good footage from bad right in the Adobe Premiere Pro timeline. Get your edits out quickly.",
-    gifLink: "https://res.cloudinary.com/dkrjwbr8w/image/upload/v1681853809/CleancutAssets/step02_j2woax.png",
+    gifLink: "https://res.cloudinary.com/dkrjwbr8w/image/upload/v1682018790/CleancutAssets/step02_rfsj7h.png",
     direction: "row-reverse",
     align: "left",
     alignItems: "flex-start",
