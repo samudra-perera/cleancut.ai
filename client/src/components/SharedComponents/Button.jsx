@@ -4,14 +4,14 @@ import styled from "styled-components";
 const StyledButton = styled.a`
   background-color: ${(props) => props.colour || "#721ED8"};
   font-size: 0.8rem;
-  padding: ${(props) => props.padding || ".6rem 2rem"};
+  padding: ${(props) => props.padding || ".8rem 2rem"};
   color: white;
   text-decoration: none;
   border-radius: 2rem;
   font-family: Graphik-500;
   z-index: 3;
   width: ${(props) => props.width};
-  min-width: 130px;
+  min-width: 80px;
   text-align: center;
 `;
 

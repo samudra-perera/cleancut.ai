@@ -1,10 +1,13 @@
-import React from 'react'
-import Slider from './Slider'
+import React from "react";
+import Slider from "./Slider";
+import { DraggableContainer } from "./style/DraggableSlider.style";
 
 const DraggableSlider = () => {
   return (
-    <div>DraggableSlider</div>
-  )
-}
+    <DraggableContainer>
+      <Slider />
+    </DraggableContainer>
+  );
+};
 
-export default DraggableSlider
+export default DraggableSlider;

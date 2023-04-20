@@ -21,6 +21,7 @@ const Nav = styled.nav`
   flex-wrap: wrap;
   z-index: 5;
   margin: 0rem 1rem 0rem 1rem;
+  padding: 1rem;
   filter: drop-shadow(0 0 0.15rem grey);
 
   @media ${media.tablet} {

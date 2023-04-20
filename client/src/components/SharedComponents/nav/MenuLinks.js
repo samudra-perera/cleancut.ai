@@ -42,10 +42,10 @@ export const MenuLinks = [
   //       }
   //   ]
   // },
-  {
-    title: "about",
-    url: "/",
-  },
+  // {
+  //   title: "about",
+  //   url: "/",
+  // },
   // {
   //   title: "Sign in",
   //   url: "/signin",

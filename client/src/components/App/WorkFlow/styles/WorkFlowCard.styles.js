@@ -67,7 +67,7 @@ const TextHeading = styled(StyledHeading)`
   font-size: 3.5rem;
   text-align: ${(props) => props.align || "justify"};
 
-  @media ${media.laptop} {
+  @media ${media.laptopLarge} {
     font-size: 2.5rem;
   }
 

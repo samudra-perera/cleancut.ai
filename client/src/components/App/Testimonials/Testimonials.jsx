@@ -12,7 +12,7 @@ const Testimonials = () => {
       <TestimonialHeader>
       Join Creatives Embracing Cleancut For Efficient Editing And Better Storytelling.
       </TestimonialHeader>
-      <TestimonialCardContainer>
+      {/* <TestimonialCardContainer>
         {TestimonialInformation.map((testimonial, index) => {
           return (
             <TestimonialCard
@@ -24,7 +24,7 @@ const Testimonials = () => {
             />
           );
         })}
-      </TestimonialCardContainer>
+      </TestimonialCardContainer> */}
     </TestimonialContainer>
   );
 };

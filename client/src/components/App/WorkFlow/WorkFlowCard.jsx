@@ -40,7 +40,7 @@ const WorkFlowCard = ({
         <TextSpan marginBottom={marginBottom}>{step}</TextSpan>
         <TextHeading align={align}>{heading}</TextHeading>
         <TextParagraph align={align}>{explanation}</TextParagraph>
-        {step === "01" ? <SoftwareSection/> : <></>}
+        {step === "01" ? <SoftwareSection /> : <></>}
       </TextContainer>
     </CardContainer>
   );
