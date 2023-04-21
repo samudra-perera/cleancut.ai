@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import Slider from "./Slider";
 import { DraggableContainer } from "./style/DraggableSlider.style";
 
 const DraggableSlider = () => {
+  const containerRef = useRef(null)
+
   return (
-    <DraggableContainer>
-      <Slider />
+    <DraggableContainer ref={containerRef}>
+      <Slider/>
     </DraggableContainer>
   );
 };
