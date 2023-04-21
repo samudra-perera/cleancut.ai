@@ -1,49 +1,48 @@
-import React, { useEffect, useRef } from "react";
-import {
-  SliderBarContainer,
-  SliderBarHandler,
-  SliderCircleContainer,
-  SliderPointerLeft,
-  SliderPointerRight,
-} from "./style/Slider.style";
+// import React, { useEffect, useRef } from "react";
+//Deprecated this component
 
-const Slider = () => {
-  const sliderRef = useRef(null);
-  const isClicked = useRef(false);
-  useEffect(() => {
-    if (!sliderRef.current) return;
+// import { forwardRef } from "react";
 
-    const slider = sliderRef.current;
+// //The ref in the forwardedRef is referring to the slider click value
+// const Slider = forwardRef(function Slider(props, ref) {
+//   const sliderRef = useRef(null);
 
-    const onMouseDown = () => {
-      isClicked.current = true;
-    };
+//   useEffect(() => {
+//     if (!sliderRef.current) return;
 
-    const onMouseUp = () => {
-      isClicked.current = false;
-    };
+//     const slider = sliderRef.current;
 
-    slider.addEventListener("mousedown", onMouseDown);
-    slider.addEventListener("mouseup", onMouseUp);
+//     const onMouseDown = (e) => {
+//       ref.current = true;
+//       console.log(ref)
+//     };
 
-    const cleanup = () => {
-      slider.removeEventListener("mousedown", onMouseDown);
-      slider.removeEventListener("mouseup", onMouseUp);
-    };
-    
-    return cleanup;
-  }, []);
+//     const onMouseUp = (e) => {
+//       ref.current = false;
+//       console.log(ref)
+//     };
 
-  return (
-    <SliderBarContainer ref={sliderRef}>
-      <SliderBarHandler />
-      <SliderCircleContainer>
-        <SliderPointerLeft />
-        <SliderPointerRight />
-      </SliderCircleContainer>
-      <SliderBarHandler />
-    </SliderBarContainer>
-  );
-};
+//     slider.addEventListener("mousedown", onMouseDown);
+//     slider.addEventListener("mouseup", onMouseUp);
 
-export default Slider;
+//     const cleanup = () => {
+//       slider.removeEventListener("mousedown", onMouseDown);
+//       slider.removeEventListener("mouseup", onMouseUp);
+//     };
+
+//     return cleanup;
+//   }, []);
+
+//   return (
+//     <SliderBarContainer ref={sliderRef}>
+//       <SliderBarHandler />
+//       <SliderCircleContainer>
+//         <SliderPointerLeft />
+//         <SliderPointerRight />
+//       </SliderCircleContainer>
+//       <SliderBarHandler />
+//     </SliderBarContainer>
+//   );
+// });
+
+// export default Slider;
