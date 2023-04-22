@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const SliderBarContainer = styled.div`
   height: 700px;
-  left: -28px;
+  left: 0;
   display: flex;
   flex-direction: column;
   place-items: center;
-  position: relative;
+  position: absolute;
   width: fit-content;
 `;
 
