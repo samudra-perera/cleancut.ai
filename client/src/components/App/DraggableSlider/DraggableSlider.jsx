@@ -25,19 +25,23 @@ const DraggableSlider = () => {
     if (!containerRef.current || !sliderRef.current) return;
 
     const container = containerRef.current;
+    const maxWidth = container.clientWidth;
     const slider = sliderRef.current;
     const sliderContainer = sliderContainerRef.current;
+
+    //Compute the width where the client needs to stop
+    const rightMax = maxWidth + slider.clientWidth / 2;
+    const leftMax = 0 - slider.clientWidth / 2;
 
     const onMouseDown = (e) => {
       isClicked.current = true;
       coords.current.startX = e.clientX;
-      console.log(coords.current);
     };
 
     const onMouseUp = (e) => {
       isClicked.current = false;
       coords.current.lastX = sliderContainer.offsetLeft;
-      console.log(isClicked.current);
+      console.log(coords);
     };
 
     const onMouseMove = (e) => {
@@ -47,11 +51,17 @@ const DraggableSlider = () => {
       sliderContainer.style.left = `${nextX}px`;
     };
 
+    const onMouseClick = (e) => {
+      console.log('yes')
+    };
+
     slider.addEventListener("mousedown", onMouseDown);
     slider.addEventListener("mouseup", onMouseUp);
+    slider.addEventListener("mouseleave", onMouseUp);
 
     container.addEventListener("mousemove", onMouseMove);
     container.addEventListener("mouseleave", onMouseUp);
+    container.addEventListener('click', onMouseClick)
 
     const cleanup = () => {
       container.removeEventListener("mousemove", onMouseMove);

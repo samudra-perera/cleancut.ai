@@ -44,11 +44,16 @@ const CallToAction = () => {
             <br /> More Story.{" "}
           </CTAHeading>
           <CTAParagraph>
-            Let Spingle (our AI) watch your footage and separate the good from
-            the shaky.
+            Let Spingle (our AI) Skillfully Identify the Most Captivating
+            Moments in Your Footage.
           </CTAParagraph>
-          <CTAButton href="https://gaydjjpbnip.typeform.com/to/QZN78xC6" target='_blank'>Start Free Trial</CTAButton>
-          <EmailFormSubscription responsive={'none'}/>
+          <CTAButton
+            href="https://gaydjjpbnip.typeform.com/to/QZN78xC6"
+            target="_blank"
+          >
+            Start Free Trial
+          </CTAButton>
+          <EmailFormSubscription responsive={"none"} />
         </StyledCTAContainer>
         <StyledImage
           src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1678816665/spinle_CTA_k0bomc.png"
