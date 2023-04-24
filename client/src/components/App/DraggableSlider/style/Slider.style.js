@@ -6,8 +6,10 @@ const SliderBarContainer = styled.div`
   display: flex;
   flex-direction: column;
   place-items: center;
-  position: absolute;
+  position: relative;
   width: fit-content;
+  transform: translateX(-50%);
+  pointer-events: all;
 `;
 
 const SliderBarHandler = styled.div`

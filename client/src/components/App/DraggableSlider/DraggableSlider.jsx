@@ -1,4 +1,6 @@
-import React, { useEffect, useRef } from "react";
+//Need to create functionality where the mouse cursor snaps to the center of the sliderDiv
+
+import React, { useEffect, useRef, useState } from "react";
 import {
   SliderBarContainer,
   SliderBarHandler,
@@ -17,7 +19,7 @@ const DraggableSlider = () => {
   const isClicked = useRef(false);
 
   const coords = useRef({
-    startX: 0,
+    startX: 300,
     lastX: 0,
   });
 
@@ -29,39 +31,43 @@ const DraggableSlider = () => {
     const slider = sliderRef.current;
     const sliderContainer = sliderContainerRef.current;
 
-    //Compute the width where the client needs to stop
-    const rightMax = maxWidth + slider.clientWidth / 2;
-    const leftMax = 0 - slider.clientWidth / 2;
 
+    //The onMouseDown function is called when the userholds the draggable div, takes in the mouseEvent
     const onMouseDown = (e) => {
+      //Changes the ref isClicked to true
       isClicked.current = true;
+      //Sets the current Coodinates to the X position of the mouse click
       coords.current.startX = e.clientX;
     };
 
+    //The onMouseUp function is called when the user releases the draggable div, takes in a mouseEvent
     const onMouseUp = (e) => {
       isClicked.current = false;
       coords.current.lastX = sliderContainer.offsetLeft;
-      console.log(coords);
+      console.log(coords.current)
     };
 
+    //The onMouseMove function is called when the user moves the mouse within the draggable div, takes in a mouseEvent
     const onMouseMove = (e) => {
+      //Checks to see if onMouseDrag has toggled isClicked to be true
       if (!isClicked.current) return;
+
+      //Calculates the nextX position based on the mouse position and the previos coordinates
       const nextX = e.clientX - coords.current.startX + coords.current.lastX;
+      console.log(nextX)
+      //This bounds the slidercontainer to within the Draggable container  
+      if (nextX <= 0 || nextX > maxWidth) {
+        return onMouseUp()
+      }
 
       sliderContainer.style.left = `${nextX}px`;
     };
 
-    const onMouseClick = (e) => {
-      console.log('yes')
-    };
-
     slider.addEventListener("mousedown", onMouseDown);
     slider.addEventListener("mouseup", onMouseUp);
-    slider.addEventListener("mouseleave", onMouseUp);
 
     container.addEventListener("mousemove", onMouseMove);
     container.addEventListener("mouseleave", onMouseUp);
-    container.addEventListener('click', onMouseClick)
 
     const cleanup = () => {
       container.removeEventListener("mousemove", onMouseMove);
