@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+//Translate = container margin + 1/2 slider container width
 const SliderBarContainer = styled.div`
   height: 100%;
   left: ${props => props.xVal || '150px'};
@@ -8,7 +10,7 @@ const SliderBarContainer = styled.div`
   place-items: center;
   position: absolute;
   width: fit-content;
-  transform: translateX(-50%);
+  transform: translateX(-5.75rem);
   pointer-events: all;
   z-index: 14;
 `;
@@ -16,7 +18,7 @@ const SliderBarContainer = styled.div`
 const SliderBarHandler = styled.div`
   height: 100%;
   flex-grow: 1;
-  background-color: #3e1194;
+  background-color: #000;
   width: 4px;
 `;
 const SliderCircleContainer = styled.div`
@@ -30,9 +32,9 @@ const SliderCircleContainer = styled.div`
   border-radius: 50%;
   border-width: 2px;
   pointer-events: auto;
-  background-color: #3e1194dd;
+  background-color: #000;
   color: #fff;
-  border: #3e1194;
+  border: #000;
   cursor: ew-resize;
 `;
 
