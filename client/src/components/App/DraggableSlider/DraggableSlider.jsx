@@ -1,7 +1,7 @@
 //Need to create functionality where the mouse cursor snaps to the center of the sliderDiv
 //When screen resizes set the state for the x value of the slider to be at the midway point
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import {
   SliderBarContainer,
   SliderBarHandler,
@@ -13,11 +13,12 @@ import {
   DraggableContainer,
   BeforeImage,
   AfterImage,
+  ImageContainer,
 } from "./style/DraggableSlider.style";
 
 const DraggableSlider = () => {
   //State for the Xvalues to pass to the clip path
-  const [x, setX] = useState(0)
+  const [x, setX] = useState(0);
 
   //These two refs are for the container div and slider div HTML elements
   const containerRef = useRef(null);
@@ -27,9 +28,17 @@ const DraggableSlider = () => {
   const isClicked = useRef(false);
 
   const coords = useRef({
-    startX: 300,
+    startX: 0,
     lastX: 0,
   });
+
+  //Setting the state of the sliderbar and the clip before the component renders
+  useLayoutEffect(() => {
+    if(containerRef.current) {
+      setX(containerRef.current.clientWidth/2)
+      coords.current.startX = containerRef.current.clientWidth/2
+    }
+  }, [])
 
   useEffect(() => {
     if (!containerRef.current || !sliderRef.current) return;
@@ -66,9 +75,10 @@ const DraggableSlider = () => {
       if (nextX <= 0 || nextX > maxWidth) {
         return onMouseUp();
       }
-
+      //Add the next value as the left value to the sliderContainer
       sliderContainer.style.left = `${nextX}px`;
-      setX(maxWidth - nextX)
+      //Set the X value as the right value for the leftside
+      setX(maxWidth - nextX);
     };
 
     //Adding Event listeners to the reference divs
@@ -78,7 +88,7 @@ const DraggableSlider = () => {
     container.addEventListener("mousemove", onMouseMove);
     container.addEventListener("mouseleave", onMouseUp);
 
-    //Remove all the event listeners 
+    //Remove all the event listeners
     const cleanup = () => {
       container.removeEventListener("mousemove", onMouseMove);
       container.removeEventListener("mouseleave", onMouseUp);
@@ -91,7 +101,7 @@ const DraggableSlider = () => {
 
   return (
     <DraggableContainer ref={containerRef}>
-      <SliderBarContainer ref={sliderContainerRef}>
+      <SliderBarContainer ref={sliderContainerRef} xVal={`${x}px`}>
         <SliderBarHandler />
         <SliderCircleContainer ref={sliderRef}>
           <SliderPointerLeft />
@@ -99,8 +109,11 @@ const DraggableSlider = () => {
         </SliderCircleContainer>
         <SliderBarHandler />
       </SliderBarContainer>
-      <BeforeImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1682365490/CleancutAssets/Screen_Shot_2023-04-02_at_9.12.38_PM_jtvnx1.png" style={{clipPath: `inset(0 ${x}px 0 0)`}}/>
-      <AfterImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1682365550/CleancutAssets/Screen_Shot_2023-04-02_at_9.18.02_PM_ykmlra.png"/>
+      <BeforeImage
+        src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1682365490/CleancutAssets/Screen_Shot_2023-04-02_at_9.12.38_PM_jtvnx1.png"
+        style={{ clipPath: `inset(0 ${x}px 0 0)` }}
+      />
+      <AfterImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1682365550/CleancutAssets/Screen_Shot_2023-04-02_at_9.18.02_PM_ykmlra.png" />
     </DraggableContainer>
   );
 };

@@ -20,4 +20,8 @@ left: 0;
 height: 100%;
 `
 
-export {DraggableContainer, BeforeImage, AfterImage}
+const ImageContainer = styled.div`
+
+`
+
+export {DraggableContainer, BeforeImage, AfterImage, ImageContainer}

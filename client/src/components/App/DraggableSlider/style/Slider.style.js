@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const SliderBarContainer = styled.div`
   height: 100%;
-  left: 0;
+  left: ${props => props.xVal || '150px'};
   display: flex;
   flex-direction: column;
   place-items: center;
