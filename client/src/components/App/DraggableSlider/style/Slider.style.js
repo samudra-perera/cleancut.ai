@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 const SliderBarContainer = styled.div`
-  height: 700px;
+  height: 100%;
   left: 0;
   display: flex;
   flex-direction: column;
   place-items: center;
-  position: relative;
+  position: absolute;
   width: fit-content;
   transform: translateX(-50%);
   pointer-events: all;
+  z-index: 14;
 `;
 
 const SliderBarHandler = styled.div`

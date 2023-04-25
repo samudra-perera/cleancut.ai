@@ -2,10 +2,22 @@ import styled from "styled-components";
 import { StyledContainer } from "../../CallToAction/styles/CTA.styled";
 
 const DraggableContainer = styled(StyledContainer)`
-height: 700px;
+height: fit-content;
 border: 2px red solid;
 overflow: hidden;
 position: relative;
 `
 
-export {DraggableContainer}
+const BeforeImage = styled.img`
+position: relative;
+z-index: 10;
+`
+
+const AfterImage = styled.img`
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+`
+
+export {DraggableContainer, BeforeImage, AfterImage}

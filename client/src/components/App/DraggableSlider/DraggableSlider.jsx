@@ -1,4 +1,5 @@
 //Need to create functionality where the mouse cursor snaps to the center of the sliderDiv
+//When screen resizes set the state for the x value of the slider to be at the midway point
 
 import React, { useEffect, useRef, useState } from "react";
 import {
@@ -8,9 +9,16 @@ import {
   SliderPointerLeft,
   SliderPointerRight,
 } from "./style/Slider.style";
-import { DraggableContainer } from "./style/DraggableSlider.style";
+import {
+  DraggableContainer,
+  BeforeImage,
+  AfterImage,
+} from "./style/DraggableSlider.style";
 
 const DraggableSlider = () => {
+  //State for the Xvalues to pass to the clip path
+  const [x, setX] = useState(0)
+
   //These two refs are for the container div and slider div HTML elements
   const containerRef = useRef(null);
   const sliderRef = useRef(null);
@@ -31,7 +39,6 @@ const DraggableSlider = () => {
     const slider = sliderRef.current;
     const sliderContainer = sliderContainerRef.current;
 
-
     //The onMouseDown function is called when the userholds the draggable div, takes in the mouseEvent
     const onMouseDown = (e) => {
       //Changes the ref isClicked to true
@@ -44,7 +51,7 @@ const DraggableSlider = () => {
     const onMouseUp = (e) => {
       isClicked.current = false;
       coords.current.lastX = sliderContainer.offsetLeft;
-      console.log(coords.current)
+      console.log(coords.current);
     };
 
     //The onMouseMove function is called when the user moves the mouse within the draggable div, takes in a mouseEvent
@@ -54,21 +61,24 @@ const DraggableSlider = () => {
 
       //Calculates the nextX position based on the mouse position and the previos coordinates
       const nextX = e.clientX - coords.current.startX + coords.current.lastX;
-      console.log(nextX)
-      //This bounds the slidercontainer to within the Draggable container  
+      console.log(nextX);
+      //This bounds the slidercontainer to within the Draggable container
       if (nextX <= 0 || nextX > maxWidth) {
-        return onMouseUp()
+        return onMouseUp();
       }
 
       sliderContainer.style.left = `${nextX}px`;
+      setX(maxWidth - nextX)
     };
 
+    //Adding Event listeners to the reference divs
     slider.addEventListener("mousedown", onMouseDown);
     slider.addEventListener("mouseup", onMouseUp);
 
     container.addEventListener("mousemove", onMouseMove);
     container.addEventListener("mouseleave", onMouseUp);
 
+    //Remove all the event listeners 
     const cleanup = () => {
       container.removeEventListener("mousemove", onMouseMove);
       container.removeEventListener("mouseleave", onMouseUp);
@@ -89,6 +99,8 @@ const DraggableSlider = () => {
         </SliderCircleContainer>
         <SliderBarHandler />
       </SliderBarContainer>
+      <BeforeImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1682365490/CleancutAssets/Screen_Shot_2023-04-02_at_9.12.38_PM_jtvnx1.png" style={{clipPath: `inset(0 ${x}px 0 0)`}}/>
+      <AfterImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1682365550/CleancutAssets/Screen_Shot_2023-04-02_at_9.18.02_PM_ykmlra.png"/>
     </DraggableContainer>
   );
 };
