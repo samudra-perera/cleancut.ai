@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { media } from "../../style/media";
 
 const StyledButton = styled.a`
   background-color: ${(props) => props.colour || "#721ED8"};
@@ -13,6 +14,10 @@ const StyledButton = styled.a`
   width: ${(props) => props.width};
   min-width: 80px;
   text-align: center;
+
+  @media ${media.tablet} {
+    margin-top: 1rem;
+  }
 `;
 
 //Button component with a text prop that allows for reusability across the application
