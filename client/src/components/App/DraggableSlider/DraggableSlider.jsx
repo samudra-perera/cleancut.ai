@@ -22,15 +22,20 @@ const DraggableSlider = () => {
   //State for the Xvalues to pass to the clip path
   const [x, setX] = useState(0);
 
-  //These two refs are for the container div and slider div HTML elements
+  //These refs are for the container div, slider div, and slider components HTML elements
   const containerRef = useRef(null);
   const sliderRef = useRef(null);
   const sliderContainerRef = useRef(null);
   const secondaryContainerRef = useRef(null);
   const beforeImageRef = useRef(null);
+  const sliderBarRefTop = useRef(null)
+  const sliderBarRefBottom = useRef(null)
   //To access the click value of the slider
   const isClicked = useRef(false);
 
+  //StartX is the starting coordinate
+  //lastX is the coordinate where the slider moves to
+  //nextX is a copy of lastX
   const coords = useRef({
     startX: 0,
     lastX: 0,
@@ -56,6 +61,8 @@ const DraggableSlider = () => {
     const slider = sliderRef.current;
     const sliderContainer = sliderContainerRef.current;
     const beforeImage = beforeImageRef.current;
+    const sliderBarTop = sliderBarRefTop.current
+    const sliderBarBottom = sliderBarRefBottom.current
 
     //The onMouseDown function is called when the userholds the draggable div, takes in the mouseEvent
     const onMouseDown = (e) => {
@@ -64,7 +71,7 @@ const DraggableSlider = () => {
       //Sets the current Coodinates to the X position of the mouse click on screen
       coords.current.startX = e.clientX;
       coords.current.startXCopy = e.clientX;
-      console.log(`StartX: ${coords.current.startX}`);
+      console.log(isClicked.current)
     };
 
     //The onMouseUp function is called when the user releases the draggable div, takes in a mouseEvent
@@ -73,6 +80,7 @@ const DraggableSlider = () => {
       isClicked.current = false;
       //Sets the lastX coordinates to the offset of the sliderContainer
       coords.current.lastX = sliderContainer.offsetLeft;
+      console.log(isClicked.current)
     };
 
     //The onMouseMove function is called when the user moves the mouse within the draggable div, takes in a mouseEvent
@@ -96,6 +104,7 @@ const DraggableSlider = () => {
 
     //On resize reset the slider
     //Calculate the ratio of the maxWidth vs the positon of the slider bar then update the ratio for the new width
+    //Edge case of when the slider leaves the
     const onResize = (e) => {
       maxWidth = container.clientWidth;
       const last = coords.current.nextX;
@@ -122,8 +131,12 @@ const DraggableSlider = () => {
 
     //Adding Event listeners to the reference divs
     slider.addEventListener("mousedown", onMouseDown);
-    slider.addEventListener("mouseup", onMouseUp);
+    // slider.addEventListener("mouseup", onMouseUp);
+    sliderBarTop.addEventListener('mousedown', onMouseDown)
+    sliderBarBottom.addEventListener('mousedown', onMouseDown)
 
+
+    container.addEventListener("mouseup", onMouseUp)
     container.addEventListener("mousemove", onMouseMove);
     container.addEventListener("mouseleave", onMouseUp);
     container.addEventListener("click", onClick);
@@ -135,8 +148,11 @@ const DraggableSlider = () => {
       container.removeEventListener("mousemove", onMouseMove);
       container.removeEventListener("mouseleave", onMouseUp);
       container.removeEventListener("click", onClick);
+      container.removeEventListener('mouseup', onMouseUp)
       slider.removeEventListener("mousedown", onMouseDown);
-      slider.removeEventListener("mouseup", onMouseUp);
+      // slider.removeEventListener("mouseup", onMouseUp);
+      sliderBarBottom.removeEventListener('mousedown', onMouseDown)
+      sliderBarTop.removeEventListener('mousedown', onMouseDown)
       window.removeEventListener("resize", onResize);
     };
 
@@ -147,12 +163,12 @@ const DraggableSlider = () => {
     <MainContainer>
       <DraggableContainer ref={containerRef}>
         <SliderBarContainer ref={sliderContainerRef} xVal={`${x}px`}>
-          <SliderBarHandler />
+          <SliderBarHandler ref={sliderBarRefTop}/>
           <SliderCircleContainer ref={sliderRef}>
             <SliderPointerLeft />
             <SliderPointerRight />
           </SliderCircleContainer>
-          <SliderBarHandler />
+          <SliderBarHandler ref={sliderBarRefBottom}/>
         </SliderBarContainer>
         <SecondaryContainer ref={secondaryContainerRef}>
           <ImageContainer>

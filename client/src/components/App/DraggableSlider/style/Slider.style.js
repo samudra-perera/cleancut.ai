@@ -20,6 +20,7 @@ const SliderBarHandler = styled.div`
   flex-grow: 1;
   background-color: #000;
   width: 4px;
+  cursor: ew-resize;
 `;
 const SliderCircleContainer = styled.div`
   display: grid;
