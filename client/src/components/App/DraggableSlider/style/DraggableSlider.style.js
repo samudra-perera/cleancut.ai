@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import { StyledContainer } from "../../CallToAction/styles/CTA.styled";
+import { media } from "../../../../style/media";
 
 const DraggableContainer = styled(StyledContainer)`
   height: fit-content;
   overflow: hidden;
   position: relative;
+
+  @media ${media.tablet} {
+    align-items: normal;
+  }
 `;
 
 const BeforeImage = styled.img`
@@ -32,7 +37,9 @@ margin: 4rem;
 `
 
 const MainContainer = styled.div`
-
+@media ${media.laptopLarge} {
+  margin: 7rem 4rem;
+}
 `
 
 export { DraggableContainer, BeforeImage, AfterImage, ImageContainer, SecondaryContainer, MainContainer };
