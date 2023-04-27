@@ -1,4 +1,5 @@
 //Need to create functionality where the mouse cursor snaps to the center of the sliderDiv onClick Event
+//Need to handle resizing the slider and clip position
 
 import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import {
@@ -26,13 +27,15 @@ const DraggableSlider = () => {
   const sliderRef = useRef(null);
   const sliderContainerRef = useRef(null);
   const secondaryContainerRef = useRef(null);
-  const beforeImageRef = useRef(null)
+  const beforeImageRef = useRef(null);
   //To access the click value of the slider
   const isClicked = useRef(false);
 
   const coords = useRef({
     startX: 0,
     lastX: 0,
+    nextX: 0,
+    startXCopy: 0,
   });
 
   //Setting the state of the sliderbar and the clip before the component renders
@@ -41,6 +44,7 @@ const DraggableSlider = () => {
       setX(containerRef.current.clientWidth / 2);
       coords.current.startX = containerRef.current.clientWidth / 2;
     }
+    console.log(coords.current);
   }, []);
 
   useEffect(() => {
@@ -48,10 +52,10 @@ const DraggableSlider = () => {
 
     //References to all the divs that need to be manipulated for the slider
     const container = containerRef.current;
-    const maxWidth = container.clientWidth;
+    let maxWidth = container.clientWidth;
     const slider = sliderRef.current;
     const sliderContainer = sliderContainerRef.current;
-    const beforeImage = beforeImageRef.current
+    const beforeImage = beforeImageRef.current;
 
     //The onMouseDown function is called when the userholds the draggable div, takes in the mouseEvent
     const onMouseDown = (e) => {
@@ -59,7 +63,8 @@ const DraggableSlider = () => {
       isClicked.current = true;
       //Sets the current Coodinates to the X position of the mouse click on screen
       coords.current.startX = e.clientX;
-      console.log(`StartX: ${coords.current.startX}`)
+      coords.current.startXCopy = e.clientX;
+      console.log(`StartX: ${coords.current.startX}`);
     };
 
     //The onMouseUp function is called when the user releases the draggable div, takes in a mouseEvent
@@ -68,7 +73,6 @@ const DraggableSlider = () => {
       isClicked.current = false;
       //Sets the lastX coordinates to the offset of the sliderContainer
       coords.current.lastX = sliderContainer.offsetLeft;
-      console.log(`LastX: ${coords.current.lastX}`)
     };
 
     //The onMouseMove function is called when the user moves the mouse within the draggable div, takes in a mouseEvent
@@ -78,7 +82,8 @@ const DraggableSlider = () => {
 
       //Calculates the nextX position based on the mouse position and the previous coordinates
       const nextX = e.clientX - coords.current.startX + coords.current.lastX;
-      
+      coords.current.nextX = nextX;
+
       //This bounds the slidercontainer to within the Draggable container
       if (nextX <= 64 || nextX > maxWidth + 64) {
         return onMouseUp();
@@ -86,24 +91,34 @@ const DraggableSlider = () => {
       //Add the next value as the left value to the sliderContainer
       sliderContainer.style.left = `${nextX}px`;
       //Set the X value as the right value for the leftside
-      beforeImage.style.clipPath = `inset(0 ${maxWidth - nextX}px 0 0)`
+      beforeImage.style.clipPath = `inset(0 ${maxWidth - nextX}px 0 0)`;
     };
 
     //On resize reset the slider
+    //Calculate the ratio of the maxWidth vs the positon of the slider bar then update the ratio for the new width
     const onResize = (e) => {
-      beforeImage.style.clipPath = `inset(0 ${container.clientWidth/2}px 0 0)`
-      sliderContainer.style.left = `${container.clientWidth/2}px`;
+      maxWidth = container.clientWidth;
+      const last = coords.current.nextX;
+      const start = coords.current.startXCopy;
+      const ratio = last/ maxWidth;
+      coords.current.lastX = last * ratio;
+      coords.current.startX = start * ratio;
+      beforeImage.style.clipPath = `inset(0 ${maxWidth - coords.current.nextX}px 0 0)`
+      sliderContainer.style.left = `${coords.current.nextX}px`;
+      // coords.current.startX = container.clientWidth/2;
+      // coords.current.lastX = container.clientWidth/2;
     };
 
     //On click move the slider to the click position
     const onClick = (e) => {
+      console.log(coords.current);
       // coords.current.startX = e.offsetX;
       // coords.current.lastX = sliderContainer.offsetLeft;
       // const nextX = e.offsetX + 128
       // sliderContainer.style.left = `${nextX}px`;
       // setX(maxWidth - nextX)
       // console.log(coords.current)
-    }
+    };
 
     //Adding Event listeners to the reference divs
     slider.addEventListener("mousedown", onMouseDown);
@@ -111,7 +126,7 @@ const DraggableSlider = () => {
 
     container.addEventListener("mousemove", onMouseMove);
     container.addEventListener("mouseleave", onMouseUp);
-    container.addEventListener('click', onClick)
+    container.addEventListener("click", onClick);
     //This Event listener is to deal with changing window and ensuring that the slider stays in position
     window.addEventListener("resize", onResize);
 
@@ -119,7 +134,7 @@ const DraggableSlider = () => {
     const cleanup = () => {
       container.removeEventListener("mousemove", onMouseMove);
       container.removeEventListener("mouseleave", onMouseUp);
-      container.removeEventListener('click', onClick)
+      container.removeEventListener("click", onClick);
       slider.removeEventListener("mousedown", onMouseDown);
       slider.removeEventListener("mouseup", onMouseUp);
       window.removeEventListener("resize", onResize);
