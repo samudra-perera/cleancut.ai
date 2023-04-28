@@ -49,18 +49,18 @@ const SecondaryContainer = styled.div`
 
 const MainContainer = styled.div`
   overflow: hidden;
-  margin: 7rem 4rem;
+  margin: 7rem 4rem 5rem;
 
   @media ${media.laptopLarge} {
-    margin: 7rem 2rem;
+    margin: 7rem 2rem 5rem;
   }
 
   @media ${media.laptop} {
-    margin: 7rem 2rem;
+    margin: 7rem 2rem 5rem;
   }
 
   @media ${media.tablet} {
-    margin: 7rem 1rem;
+    margin: 7rem 1rem 5rem;
   }
 `;
 
