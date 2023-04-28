@@ -30,6 +30,8 @@ const DraggableSlider = () => {
   const beforeImageRef = useRef(null);
   const sliderBarRefTop = useRef(null);
   const sliderBarRefBottom = useRef(null);
+  const screenSize = useRef(window.innerWidth);
+
   //To access the click value of the slider
   const isClicked = useRef(false);
 
@@ -93,6 +95,7 @@ const DraggableSlider = () => {
       const nextX = e.clientX - coords.current.startX + coords.current.lastX;
       coords.current.nextX = nextX;
 
+      const offset = boundCaclulator(screenSize.current);
       //This bounds the slidercontainer to within the Draggable container
       if (nextX <= 64 || nextX > maxWidth + 64) {
         return onMouseUp();
@@ -100,13 +103,17 @@ const DraggableSlider = () => {
       //Add the next value as the left value to the sliderContainer
       sliderContainer.style.left = `${nextX}px`;
       //Set the X value as the right value for the leftside
-      beforeImage.style.clipPath = `inset(0 ${maxWidth - nextX}px 0 0)`;
+      beforeImage.style.clipPath = `inset(0 ${
+        maxWidth - nextX + offset
+      }px 0 0)`;
     };
 
     //On resize reset the slider
     //Calculate the ratio of the maxWidth vs the positon of the slider bar then update the ratio for the new width
     //Edge case of when the slider leaves the
     const onResize = (e) => {
+      screenSize.current = window.innerWidth;
+
       maxWidth = container.clientWidth;
       const last = coords.current.nextX;
       const start = coords.current.startXCopy;
@@ -118,15 +125,26 @@ const DraggableSlider = () => {
         ratio = ratio + 0.3;
       }
 
-      console.log(ratio);
+      const offset = boundCaclulator(screenSize.current);
+      console.log(offset)
       coords.current.lastX = last * ratio;
       coords.current.startX = start * ratio;
       beforeImage.style.clipPath = `inset(0 ${
-        maxWidth - coords.current.lastX
+        maxWidth - coords.current.lastX + offset
       }px 0 0)`;
       sliderContainer.style.left = `${coords.current.lastX}px`;
       // coords.current.startX = container.clientWidth/2;
       // coords.current.lastX = container.clientWidth/2;
+    };
+
+    const boundCaclulator = (screen) => {
+      if (screen <= 768 ) {
+        return 46;
+      } else if (screen <= 1024) {
+        return 32;
+      } else {
+        return 0;
+      }
     };
 
     //On click move the slider to the click position

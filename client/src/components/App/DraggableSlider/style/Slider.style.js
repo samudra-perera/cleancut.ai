@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../../../style/media";
 
 
 //Translate = container margin + 1/2 slider container width
@@ -13,6 +14,11 @@ const SliderBarContainer = styled.div`
   transform: translateX(-5.75rem);
   pointer-events: all;
   z-index: 14;
+
+  @media ${media.mobile} {
+    height: 80%;
+  }
+
 `;
 
 const SliderBarHandler = styled.div`

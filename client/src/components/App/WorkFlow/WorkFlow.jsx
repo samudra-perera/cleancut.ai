@@ -11,12 +11,14 @@ import { WorkFlowData } from "./WorkFlowData";
 import WorkFlowCard from "./WorkFlowCard";
 import Testimonials from "../Testimonials/Testimonials";
 import DraggableSlider from "../DraggableSlider/DraggableSlider";
+import SocialBanner from "../SocialBanner/SocialBanner";
 
 const WorkFlow = () => {
   return (
     <ContainerContainer>
       <WorkFlowContainer>
         <DraggableSlider />
+        <SocialBanner />
         <WorkFlowHeaderContainer>
           <HeaderTag text={"The Future of Video Editing is Now"} />
           <WorkFlowHeading>Work At The Speed of Creativity</WorkFlowHeading>

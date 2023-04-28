@@ -1,14 +1,18 @@
 import styled from "styled-components";
-import { StyledContainer } from "../../CallToAction/styles/CTA.styled";
 import { media } from "../../../../style/media";
 
-const DraggableContainer = styled(StyledContainer)`
+const DraggableContainer = styled.div`
   height: fit-content;
   overflow: hidden;
   position: relative;
+  padding-top: 5rem;
 
-  @media ${media.tablet} {
-    align-items: normal;
+  @media ${media.laptopLarge} {
+    padding-top: 4rem;
+  }
+
+  @media ${media.laptop} {
+    padding-top: 3rem;
   }
 `;
 
@@ -33,13 +37,38 @@ const ImageContainer = styled.div`
 `;
 
 const SecondaryContainer = styled.div`
-margin: 4rem;
-`
+  margin: 4rem;
+  @media ${media.laptop} {
+    margin: 2rem;
+  }
+
+  @media ${media.tablet} {
+    margin: 1rem;
+  }
+`;
 
 const MainContainer = styled.div`
-@media ${media.laptopLarge} {
+  overflow: hidden;
   margin: 7rem 4rem;
-}
-`
 
-export { DraggableContainer, BeforeImage, AfterImage, ImageContainer, SecondaryContainer, MainContainer };
+  @media ${media.laptopLarge} {
+    margin: 7rem 2rem;
+  }
+
+  @media ${media.laptop} {
+    margin: 7rem 2rem;
+  }
+
+  @media ${media.tablet} {
+    margin: 7rem 1rem;
+  }
+`;
+
+export {
+  DraggableContainer,
+  BeforeImage,
+  AfterImage,
+  ImageContainer,
+  SecondaryContainer,
+  MainContainer,
+};

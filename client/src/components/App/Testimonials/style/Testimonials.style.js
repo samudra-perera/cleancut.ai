@@ -52,7 +52,7 @@ const TestimonialCardContainer = styled.div`
 
 const TestimonialDivider = styled.div`
   height: 2px;
-  width: 90%;
+  width: ${props => props.width || '90%'};
   background-color: white;
 `;
 
