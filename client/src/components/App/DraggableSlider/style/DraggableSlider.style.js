@@ -6,6 +6,9 @@ const DraggableContainer = styled.div`
   overflow: hidden;
   position: relative;
   padding-top: 5rem;
+  pointer-events: auto;
+  touch-action: none;
+  user-select: none;
 
   @media ${media.laptopLarge} {
     padding-top: 4rem;

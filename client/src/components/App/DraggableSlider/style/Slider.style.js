@@ -27,6 +27,7 @@ const SliderBarHandler = styled.div`
   background-color: #000;
   width: 4px;
   cursor: ew-resize;
+  pointer-events: auto;
 `;
 const SliderCircleContainer = styled.div`
   display: grid;

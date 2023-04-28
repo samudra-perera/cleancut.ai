@@ -84,6 +84,7 @@ const DraggableSlider = () => {
       isClicked.current = false;
       //Sets the lastX coordinates to the offset of the sliderContainer
       coords.current.lastX = sliderContainer.offsetLeft;
+      console.log(isClicked.current)
     };
 
     //The onMouseMove function is called when the user moves the mouse within the draggable div, takes in a mouseEvent
@@ -94,6 +95,7 @@ const DraggableSlider = () => {
       //Calculates the nextX position based on the mouse position and the previous coordinates
       const nextX = e.clientX - coords.current.startX + coords.current.lastX;
       coords.current.nextX = nextX;
+      console.log('registered')
 
       const offset = boundCaclulator(screenSize.current);
       //This bounds the slidercontainer to within the Draggable container
@@ -126,7 +128,6 @@ const DraggableSlider = () => {
       }
 
       const offset = boundCaclulator(screenSize.current);
-      console.log(offset)
       coords.current.lastX = last * ratio;
       coords.current.startX = start * ratio;
       beforeImage.style.clipPath = `inset(0 ${
@@ -149,7 +150,10 @@ const DraggableSlider = () => {
 
     //On click move the slider to the click position
     const onClick = (e) => {
-      // console.log('click')
+      //Sets the current Coodinates to the X position of the mouse click on screen
+      // coords.current.startX = e.clientX;
+      // coords.current.startXCopy = e.clientX;
+      // isClicked.current = true;
     };
 
     //Adding Event listeners to the reference divs
@@ -160,8 +164,9 @@ const DraggableSlider = () => {
 
     container.addEventListener("pointerup", onMouseUp);
     container.addEventListener("pointermove", onMouseMove);
+    container.addEventListener("touchmove", onMouseMove)
     container.addEventListener("pointerleave", onMouseUp);
-    container.addEventListener("click", onClick);
+    // container.addEventListener("click", onClick);
     //This Event listener is to deal with changing window and ensuring that the slider stays in position
     window.addEventListener("resize", onResize);
 
@@ -169,7 +174,7 @@ const DraggableSlider = () => {
     const cleanup = () => {
       container.removeEventListener("pointermove", onMouseMove);
       container.removeEventListener("pointerleave", onMouseUp);
-      container.removeEventListener("click", onClick);
+      // container.removeEventListener("click", onClick);
       container.removeEventListener("pointerup", onMouseUp);
       slider.removeEventListener("pointerdown", onMouseDown);
       // slider.removeEventListener("mouseup", onMouseUp);
