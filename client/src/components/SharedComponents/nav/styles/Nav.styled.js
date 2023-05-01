@@ -85,7 +85,7 @@ const Menu = styled.div`
   align-items: center;
   position: relative;
   width: 40%;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
   font-family: Graphik;
 
   @media ${media.laptopLarge} {
