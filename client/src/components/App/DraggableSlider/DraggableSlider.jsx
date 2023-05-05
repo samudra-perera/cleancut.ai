@@ -122,9 +122,9 @@ const DraggableSlider = () => {
       let ratio = last / maxWidth;
       //To handle edge cases of last being larger than the maxwidth and when last becomes so much smaller than maxWidth
       if (ratio > 1) {
-        ratio = ratio - 0.3;
+        ratio = ratio - 0.5;
       } else if (ratio < 0.3) {
-        ratio = ratio + 0.3;
+        ratio = ratio + 0.8;
       }
 
       const offset = boundCaclulator(screenSize.current);

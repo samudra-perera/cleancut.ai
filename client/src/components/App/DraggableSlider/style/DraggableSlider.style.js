@@ -9,6 +9,8 @@ const DraggableContainer = styled.div`
   pointer-events: auto;
   touch-action: none;
   user-select: none;
+  max-width: 1200px;
+  margin: 0 auto;
 
   @media ${media.laptopLarge} {
     padding-top: 4rem;
@@ -52,18 +54,18 @@ const SecondaryContainer = styled.div`
 
 const MainContainer = styled.div`
   overflow: hidden;
-  margin: 7rem 4rem 5rem;
+  margin: 0rem 4rem 5rem;
 
   @media ${media.laptopLarge} {
-    margin: 7rem 2rem 5rem;
+    margin: 0rem 2rem 5rem;
   }
 
   @media ${media.laptop} {
-    margin: 7rem 2rem 5rem;
+    margin: 0rem 2rem 5rem;
   }
 
   @media ${media.tablet} {
-    margin: 7rem 1rem 5rem;
+    margin: 0rem 1rem 5rem;
   }
 `;
 

@@ -34,7 +34,7 @@ const MeetSpingle = () => {
           >
             Start Free Trial
           </CTAButton>
-          <EmailFormSubscription responsive={"none"} colour={"#F8705D"} />
+          <EmailFormSubscription responsive={"none"} colour={"#F8705D"} hoverColour={'#D26454'}/>
         </MeetSpingleTextContainer>
       </MeetSpingleContainer>
     </ContainerContainer>

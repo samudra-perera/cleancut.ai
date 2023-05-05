@@ -9,6 +9,7 @@ import { media } from "../../../../style/media";
 const SocialBannerContainer = styled(StyledContainer)`
     align-items: center;
     margin-top: 0;
+    margin-bottom: 3rem;
 
     @media ${media.tablet} {
         margin: 2rem;

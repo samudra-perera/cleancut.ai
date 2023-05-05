@@ -7,6 +7,7 @@ import NavBar from "../components/SharedComponents/nav/NavBar";
 
 const BackgroundContainer = styled.div`
   background-image: url("https://res.cloudinary.com/dkrjwbr8w/image/upload/v1682972783/CleancutAssets/404wSpingle_i5qxx4.png");
+  background-position: center;
   height: 100vh;
   width: 100vw;
 `;

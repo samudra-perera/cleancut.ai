@@ -4,7 +4,7 @@ import EmailForm from "./EmailForm";
 
 const url = 'https://cleancut.us1.list-manage.com/subscribe/post?u=c2f88fc14878154bd56e3c9e1&amp;id=b1fe8b47f5'
 
-const EmailFormSubscription = ({responsive, colour}) => {
+const EmailFormSubscription = ({responsive, colour, hoverColour}) => {
   return (
 
     <MailchimpSubscribe
@@ -17,6 +17,7 @@ const EmailFormSubscription = ({responsive, colour}) => {
             onValidated={(formData) => subscribe(formData)}
             responsive={responsive}
             colour={colour}
+            hoverColour={hoverColour}
           />
         );
       }}

@@ -11,6 +11,10 @@ const FooterContainer = styled.div`
   max-width: 1800px;
   margin: 0 auto;
 
+  @media ${media.tablet} {
+    padding: 1.5rem 0;
+  }
+
   @media ${media.mobile} {
     flex-direction: column-reverse;
     align-items: center;
@@ -22,7 +26,7 @@ const FooterContentContainer = styled.div`
   flex-direction: column;
   margin: 2rem;
   padding: 1.5rem 3rem 1.5rem 1.5rem;
-  border-right: ${({ left }) => (left ? ".5px solid grey" : "none")};
+  border-right: ${({ left }) => (left ? ".5px solid lightgrey" : "none")};
   display: flex;
 
   @media ${media.tablet} {
@@ -33,7 +37,7 @@ const FooterContentContainer = styled.div`
   @media ${media.mobile} {
     border-right: none;
     width: 80%;
-    border-top: ${({ left }) => (left ? ".5px solid grey" : "none")};
+    border-top: ${({ left }) => (left ? ".5px solid lightgrey" : "none")};
     /* border-bottom: 1px solid lightgrey; */
     padding-bottom: 1.5rem;
   }
@@ -74,7 +78,7 @@ const FooterLogo = styled.img`
   }
 
   @media ${media.mobile} {
-    padding-top: 2.5rem;
+    padding-top: 2rem;
   }
 
 `

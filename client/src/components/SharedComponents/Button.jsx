@@ -14,6 +14,12 @@ const StyledButton = styled.a`
   width: ${(props) => props.width};
   min-width: 80px;
   text-align: center;
+  border: #721ED8 solid 2px;
+
+  &:hover {
+    background-color: white;
+    color: #721ED8;
+  }
 
   @media ${media.tablet} {
     margin-top: 1rem;

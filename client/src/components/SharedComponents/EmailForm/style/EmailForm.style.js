@@ -14,7 +14,7 @@ const EmailInput = styled.input`
   }
 
   @media ${media.laptop} {
-    width: 210px;
+    width: 180px;
   }
 `;
 
@@ -44,6 +44,15 @@ const StyledButton = styled.button`
   font-family: Graphik-500;
   cursor: pointer;
   border: none;
+
+  &:hover {
+    background-color: ${props => props.hoverColour || '#540BAC'};
+  }
+
+  @media ${media.laptop} {
+    padding: .7rem 1rem;
+    width: 125px;
+  }
 `;
 
 const ResponseMessage = styled.p`

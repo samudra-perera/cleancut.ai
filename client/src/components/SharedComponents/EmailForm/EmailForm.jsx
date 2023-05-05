@@ -6,7 +6,7 @@ import {
   ResponseMessage,
 } from "./style/EmailForm.style";
 
-const EmailForm = ({ colour, responsive, status, message, onValidated }) => {
+const EmailForm = ({ colour, responsive, status, message, onValidated, hoverColour }) => {
   const [error, setError] = useState(null);
   const [email, setEmail] = useState(null);
 
@@ -56,7 +56,7 @@ const EmailForm = ({ colour, responsive, status, message, onValidated }) => {
           onChange={(e) => setEmail(e.target.value ?? " ")}
           onKeyUp={(e) => handleInputKeyEvent(e)}
         ></EmailInput>
-        <StyledButton colour={colour} onClick={handleSubmission}>
+        <StyledButton colour={colour} hoverColour={hoverColour} onClick={handleSubmission}>
           Start Free Trial
         </StyledButton>
       </MailForm>

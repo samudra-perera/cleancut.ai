@@ -60,6 +60,7 @@ const MeetSpingleTextContainer = styled.div`
   @media ${media.tablet} {
     width: 100%;
     align-items: baseline;
+    padding-bottom: 5rem;
   }
 
 `;
