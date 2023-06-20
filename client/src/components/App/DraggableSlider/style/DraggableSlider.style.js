@@ -9,8 +9,9 @@ const DraggableContainer = styled.div`
   pointer-events: auto;
   touch-action: none;
   user-select: none;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
+  
 
   @media ${media.laptopLarge} {
     padding-top: 4rem;
@@ -39,6 +40,7 @@ const ImageContainer = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  /* box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
 `;
 
 const SecondaryContainer = styled.div`

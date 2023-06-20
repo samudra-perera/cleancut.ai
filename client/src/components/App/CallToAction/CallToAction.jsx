@@ -22,7 +22,7 @@ const CTA = styled.div`
   color: #03004e;
   overflow: hidden;
   align-items: center;
-  max-width: 1800px;
+  max-width: 1440px;
   margin: 0 auto;
 
   @media ${media.tablet} {
