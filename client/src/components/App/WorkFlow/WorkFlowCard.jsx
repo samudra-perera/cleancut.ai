@@ -23,6 +23,7 @@ const WorkFlowCard = ({
   borderRadius,
   gifLink,
   marginBottom,
+  alt
 }) => {
   return (
     <CardContainer direction={direction}>
@@ -33,7 +34,7 @@ const WorkFlowCard = ({
           <SecondaryBackgroundRight borderRadius={borderRadius} />
         )}
         <GifContainer borderRadius={borderRadius}>
-          <CardIframe src={gifLink} />
+          <CardIframe src={gifLink} alt={alt}/>
         </GifContainer>
       </MediaContainer>
       <TextContainer align={alignItems}>

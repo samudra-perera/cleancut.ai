@@ -15,7 +15,7 @@ const MeetSpingle = () => {
   return (
     <ContainerContainer>
       <MeetSpingleContainer>
-        <SpingleImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1681838995/CleancutAssets/Spingle_Computer_cfymm7.png" />
+        <SpingleImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1687294150/CleancutAssets/Spingle_Computer_sh2enf.webp" alt="Meet-Spingle_image"/>
         <MeetSpingleTextContainer>
           <MeetSpingleHeading>
             Meet Spingle, your Personal AI assistant

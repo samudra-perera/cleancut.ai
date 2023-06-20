@@ -84,7 +84,7 @@ const DraggableSlider = () => {
       isClicked.current = false;
       //Sets the lastX coordinates to the offset of the sliderContainer
       coords.current.lastX = sliderContainer.offsetLeft;
-      console.log(isClicked.current)
+      console.log(isClicked.current);
     };
 
     //The onMouseMove function is called when the user moves the mouse within the draggable div, takes in a mouseEvent
@@ -95,7 +95,7 @@ const DraggableSlider = () => {
       //Calculates the nextX position based on the mouse position and the previous coordinates
       const nextX = e.clientX - coords.current.startX + coords.current.lastX;
       coords.current.nextX = nextX;
-      console.log('registered')
+      console.log("registered");
 
       const offset = boundCaclulator(screenSize.current);
       //This bounds the slidercontainer to within the Draggable container
@@ -139,7 +139,7 @@ const DraggableSlider = () => {
     };
 
     const boundCaclulator = (screen) => {
-      if (screen <= 768 ) {
+      if (screen <= 768) {
         return 46;
       } else if (screen <= 1024) {
         return 32;
@@ -164,7 +164,7 @@ const DraggableSlider = () => {
 
     container.addEventListener("pointerup", onMouseUp);
     container.addEventListener("pointermove", onMouseMove);
-    container.addEventListener("touchmove", onMouseMove)
+    container.addEventListener("touchmove", onMouseMove);
     container.addEventListener("pointerleave", onMouseUp);
     // container.addEventListener("click", onClick);
     //This Event listener is to deal with changing window and ensuring that the slider stays in position
@@ -200,11 +200,15 @@ const DraggableSlider = () => {
         <SecondaryContainer ref={secondaryContainerRef}>
           <ImageContainer>
             <BeforeImage
-              src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1682365490/CleancutAssets/Screen_Shot_2023-04-02_at_9.12.38_PM_jtvnx1.png"
+              src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1687292301/CleancutAssets/before_fatvjg.webp"
               style={{ clipPath: `inset(0 ${x}px 0 0)` }}
               ref={beforeImageRef}
+              alt="Before_CleancutAi"
             />
-            <AfterImage src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1682365550/CleancutAssets/Screen_Shot_2023-04-02_at_9.18.02_PM_ykmlra.png" />
+            <AfterImage
+              src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1687292301/CleancutAssets/after_f0yelp.webp"
+              alt="After_CleancutAi"
+            />
           </ImageContainer>
         </SecondaryContainer>
       </DraggableContainer>

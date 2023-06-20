@@ -13,7 +13,7 @@ const Footer = ({element}) => {
     <FooterContainerContainer>
       <FooterContainer>
         <FooterContentContainer left={true}>
-          <FooterLogo src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1680553851/CleancutAssets/cleancut_logo_lxt0hp.png" />
+          <FooterLogo alt="footer-logo" src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1680553851/CleancutAssets/cleancut_logo_lxt0hp.png" />
           <FooterText>© 2023 Cleancut Inc. All rights reserved</FooterText>
         </FooterContentContainer>
         {element}

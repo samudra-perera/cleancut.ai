@@ -41,6 +41,7 @@ const WorkFlow = () => {
               borderRadius={card.borderRadius}
               gifLink={card.gifLink}
               marginBottom={card.marginBottom}
+              alt={card.alt}
             />
           );
         })}

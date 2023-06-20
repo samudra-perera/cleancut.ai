@@ -56,7 +56,7 @@ const CallToAction = () => {
           <EmailFormSubscription responsive={"none"} />
         </StyledCTAContainer>
         <StyledImage
-          src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1678816665/spinle_CTA_k0bomc.png"
+          src="https://res.cloudinary.com/dkrjwbr8w/image/upload/v1687291729/CleancutAssets/spinle_CTA_ibqrkc.webp"
           alt="Image of Spingle"
         />
       </CTA>
